@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "nourml",
+      "password": 12345,
+      "name": "nour",
+      "type": "admin"
+    },
+    {
+      "id": 2,
+      "username": "eslamA",
+      "password": 12345,
+      "name": "eslam",
+      "type": "investor"
+    }
+  ]
+}
