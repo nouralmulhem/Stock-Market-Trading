@@ -1,7 +1,7 @@
 import { TextField } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-export const AuthInput = styled(TextField)(({ theme }) => ({
+export const DsInputField = styled(TextField)(({ theme }) => ({
   fieldset: {
     borderColor: "#ffffff3b",
   },

@@ -1,9 +1,8 @@
-import React, { Children } from "react";
 import { Box, Typography, IconButton } from "@mui/material";
+import { AuthPaper, ChildPaper } from "./styles";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GoogleIcon from "@mui/icons-material/Google";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import { AuthPaper, ChildPaper } from "./styles";
 
 type FormProps = {
   children: React.ReactNode;

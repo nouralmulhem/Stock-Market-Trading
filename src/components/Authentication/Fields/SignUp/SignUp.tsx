@@ -1,8 +1,8 @@
 import { FormControl, FormGroup, Typography, Button } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthInput } from "../styles";
 import { useCallback, useState } from "react";
 import Notification from "../Notification/Notification";
+import InputField from "../../../../DS/WhiteInput/InputField";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -23,15 +23,15 @@ const SignUp = () => {
         sx={{ width: "90%", flexGrow: 1 }}
       >
         <FormGroup sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-          <AuthInput required color="info" label="Name" variant="outlined" />
-          <AuthInput
+          <InputField required color="info" label="Name" variant="outlined" />
+          <InputField
             required
             color="info"
             label="ُEmail"
             type="email"
             variant="outlined"
           />
-          <AuthInput
+          <InputField
             required
             color="info"
             label="Password"

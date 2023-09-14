@@ -1,28 +1,31 @@
 import {
-  Paper,
   Toolbar,
   ListItemText,
   ListItemIcon,
   ListItemButton,
-  List,
   Button,
   Box,
 } from "@mui/material";
 import { Container, DsDivider, DsList, DsListItem } from "./styles";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 import { useNavigate, useParams } from "react-router-dom";
 import { useIsAdmin } from "../../contexts/useIsAdmin";
 import { useCookies } from "react-cookie";
 
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import ApartmentIcon from "@mui/icons-material/Apartment";
+import PaidIcon from "@mui/icons-material/Paid";
+import PersonIcon from "@mui/icons-material/Person";
+import ShowChartIcon from "@mui/icons-material/ShowChart";
+
 const ListElementsAdmin = [
-  { text: "Dashboard", icon: <InboxIcon sx={{ color: "white" }} /> },
-  { text: "Companies", icon: <MailIcon sx={{ color: "white" }} /> },
-  { text: "Investors", icon: <InboxIcon sx={{ color: "white" }} /> },
+  { text: "Dashboard", icon: <DashboardIcon sx={{ color: "white" }} /> },
+  { text: "Companies", icon: <ApartmentIcon sx={{ color: "white" }} /> },
+  { text: "Investors", icon: <PaidIcon sx={{ color: "white" }} /> },
 ];
 
 const ListElementsInvestor = [
-  { text: "Stocks", icon: <MailIcon sx={{ color: "white" }} /> },
+  { text: "Stocks", icon: <ShowChartIcon sx={{ color: "white" }} /> },
+  { text: "Profile", icon: <PersonIcon sx={{ color: "white" }} /> },
 ];
 
 const Sidebar = () => {

@@ -1,31 +1,28 @@
 import { Paper } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-export const AuthPaper = styled(Paper)(({ theme }) => ({
-  width: "30%",
-  minHeight: "40%",
-  margin: "auto",
+export const DsPaper = styled(Paper)(({ theme }) => ({
+  width: "95%",
   padding: 30,
-  paddingTop: 120,
-  top: "150px",
+  paddingTop: 90,
   position: "relative",
   color: "#fff",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  backgroundColor: "#1d2843",
+  backgroundColor: theme.palette.secondary.main,
 }));
 
-export const ChildPaper = styled(Paper)(({ theme }) => ({
-  width: "75%",
+export const DsChildPaper = styled(Paper)(({ theme }) => ({
+  width: "87%",
   margin: "auto",
-  padding: 30,
-  top: "-70px",
+  padding: 15,
+  paddingLeft: 40,
+  top: "-10px",
   position: "absolute",
   display: "flex",
   flexDirection: "column",
   gap: "1rem",
   color: "inherit",
-  alignItems: "center",
   background: "linear-gradient(195deg, rgb(73, 163, 241), rgb(18 79 159))",
 }));

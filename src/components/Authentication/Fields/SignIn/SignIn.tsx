@@ -5,15 +5,14 @@ import {
   Switch,
   Typography,
   Button,
-  AlertColor,
 } from "@mui/material";
 import { useCallback, useState } from "react";
-import { AuthInput } from "../styles";
 import { Link, useNavigate } from "react-router-dom";
 import { getUserInfo } from "./server";
 import { useCookies } from "react-cookie";
 import Notification from "../Notification/Notification";
 import { user } from "../../../../contexts/useCurrentUser";
+import InputField from "../../../../DS/WhiteInput/InputField";
 
 const SignIn = () => {
   const [state, setState] = useState(false);
@@ -43,7 +42,7 @@ const SignIn = () => {
         sx={{ width: "90%", flexGrow: 1 }}
       >
         <FormGroup sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-          <AuthInput
+          <InputField
             required
             color="info"
             label="username"
@@ -52,10 +51,11 @@ const SignIn = () => {
               setUsername(e.target.value);
             }}
           />
-          <AuthInput
+          <InputField
             required
             color="info"
             label="password"
+            type="password"
             variant="outlined"
             onChange={(e) => {
               setPassword(e.target.value);

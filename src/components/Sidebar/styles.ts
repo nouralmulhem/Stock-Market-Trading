@@ -34,7 +34,7 @@ export const DsDivider = styled(Divider)(({ theme }) => ({
     "linear-gradient(to right, rgba(52, 71, 103, 0), rgb(255, 255, 255), rgba(52, 71, 103, 0)) !important",
 }));
 
-export const DsList = styled(List)<DsListItemProps>(({ theme, contained }) => ({
+export const DsList = styled(List)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
