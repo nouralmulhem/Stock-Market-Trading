@@ -1,14 +1,15 @@
 import { useCallback } from "react";
-import { Alert, Snackbar } from "@mui/material";
+import { Alert, AlertColor, Snackbar } from "@mui/material";
 
 type NotificationProps = {
   open: boolean;
   setOpen: (open: boolean) => void;
   msg: string;
+  type: AlertColor | undefined;
 };
 
 const Notification = (props: NotificationProps) => {
-  const { open, setOpen, msg } = props;
+  const { open, setOpen, msg, type } = props;
   const handleClose = useCallback(
     (event?: React.SyntheticEvent | Event, reason?: string) => {
       if (reason === "clickaway") {
@@ -22,7 +23,7 @@ const Notification = (props: NotificationProps) => {
 
   return (
     <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-      <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
+      <Alert onClose={handleClose} severity={type} sx={{ width: "100%" }}>
         {msg}
       </Alert>
     </Snackbar>

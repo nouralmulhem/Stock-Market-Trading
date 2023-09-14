@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 
 interface DsListItemProps {
   disablePadding?: boolean;
-  contained?: boolean;
+  contained?: string;
 }
 
 export const Container = styled(Paper)(({ theme }) => ({
@@ -45,6 +45,7 @@ export const DsList = styled(List)<DsListItemProps>(({ theme, contained }) => ({
 export const DsListItem = styled(ListItem)<DsListItemProps>(
   ({ theme, contained }) => ({
     borderRadius: 10,
-    backgroundColor: contained ? theme.palette.info.main : "transparent",
+    backgroundColor:
+      contained === "true" ? theme.palette.info.main : "transparent",
   })
 );

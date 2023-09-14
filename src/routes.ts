@@ -26,7 +26,7 @@ const routes: Routes[] = [
   {
     name: "Dashboard",
     key: "dashboard",
-    route: "/dashboard",
+    route: "/dashboard/:param",
     component: Dashboard,
   },
 ];

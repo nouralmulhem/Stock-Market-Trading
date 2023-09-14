@@ -11,18 +11,26 @@ import {
 import { Container, DsDivider, DsList, DsListItem } from "./styles";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
-import { useLocation } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { useIsAdmin } from "../../contexts/useIsAdmin";
+import { useCookies } from "react-cookie";
 
-const drawerWidth = 240;
-
-const ListElements = [
+const ListElementsAdmin = [
   { text: "Dashboard", icon: <InboxIcon sx={{ color: "white" }} /> },
-  { text: "Starred", icon: <MailIcon /> },
-  { text: "Send email", icon: <InboxIcon /> },
+  { text: "Companies", icon: <MailIcon sx={{ color: "white" }} /> },
+  { text: "Investors", icon: <InboxIcon sx={{ color: "white" }} /> },
+];
+
+const ListElementsInvestor = [
+  { text: "Stocks", icon: <MailIcon sx={{ color: "white" }} /> },
 ];
 
 const Sidebar = () => {
-  const page = useLocation().pathname;
+  const { param } = useParams();
+  const navigate = useNavigate();
+  const { isAdmin } = useIsAdmin();
+  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
+  const ListElements = isAdmin ? ListElementsAdmin : ListElementsInvestor;
 
   const drawer = (
     <Box sx={{ flexGrow: 1 }}>
@@ -33,9 +41,13 @@ const Sidebar = () => {
           <DsListItem
             key={entity.text}
             disablePadding
-            contained={page === `/${entity.text.toLowerCase()}`}
+            contained={(param === entity.text.toLowerCase()).toString()}
           >
-            <ListItemButton>
+            <ListItemButton
+              onClick={() =>
+                navigate(`/dashboard/${entity.text.toLowerCase()}`)
+              }
+            >
               <ListItemIcon>{entity.icon}</ListItemIcon>
               <ListItemText primary={entity.text} sx={{ flexGrow: 1 }} />
             </ListItemButton>
@@ -48,7 +60,16 @@ const Sidebar = () => {
   return (
     <Container>
       {drawer}
-      <Button variant="contained">Upgrade</Button>
+      <Button
+        variant="contained"
+        onClick={() => {
+          removeCookie("user", { path: "/" });
+          navigate("/authentication/signin");
+          navigate(0);
+        }}
+      >
+        Log out
+      </Button>
     </Container>
   );
 };

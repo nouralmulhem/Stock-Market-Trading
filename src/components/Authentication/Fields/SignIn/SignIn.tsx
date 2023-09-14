@@ -5,6 +5,7 @@ import {
   Switch,
   Typography,
   Button,
+  AlertColor,
 } from "@mui/material";
 import { useCallback, useState } from "react";
 import { AuthInput } from "../styles";
@@ -12,29 +13,27 @@ import { Link, useNavigate } from "react-router-dom";
 import { getUserInfo } from "./server";
 import { useCookies } from "react-cookie";
 import Notification from "../Notification/Notification";
-
-export type user = {
-  id: number;
-  name: string;
-  type: string;
-  username: string;
-};
+import { user } from "../../../../contexts/useCurrentUser";
 
 const SignIn = () => {
   const [state, setState] = useState(false);
   const [username, setUsername] = useState<string | undefined>(undefined);
+  const [password, setPassword] = useState<string | undefined>(undefined);
   const [cookies, setCookie] = useCookies(["user"]);
-  const [open, setOpen] = useState(false);
+  const [openSuccess, setOpenSuccess] = useState(false);
+  const [openFail, setOpenFail] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = useCallback(() => {
-    const userInfo = getUserInfo<user>(username);
-    userInfo.then((res) => setCookie("user", res, { path: "/" }));
-    setOpen(true);
-    setTimeout(() => {
-      navigate("/dashboard");
-    }, 3000);
-  }, []);
+    if (username && password) {
+      const userInfo = getUserInfo<user>(username);
+      userInfo.then((res) => setCookie("user", res, { path: "/" }));
+      setOpenSuccess(true);
+      setTimeout(() => {
+        navigate("/dashboard/dashboard");
+      }, 3000);
+    } else setOpenFail(true);
+  }, [username, password]);
 
   return (
     <>
@@ -58,6 +57,9 @@ const SignIn = () => {
             color="info"
             label="password"
             variant="outlined"
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
           />
           <FormControlLabel
             control={
@@ -70,7 +72,12 @@ const SignIn = () => {
             }
             label="Remmember me"
           />
-          <Button color="info" variant="contained" onClick={handleSubmit}>
+          <Button
+            type="submit"
+            color="info"
+            variant="contained"
+            onClick={handleSubmit}
+          >
             Sign in
           </Button>
         </FormGroup>
@@ -79,7 +86,18 @@ const SignIn = () => {
         Don&apos;t have an account?{" "}
         <Link to={"/authentication/signup"}>Sign up</Link>
       </Typography>
-      <Notification open={open} setOpen={setOpen} msg={"welcome back ^^"} />
+      <Notification
+        open={openSuccess}
+        setOpen={setOpenSuccess}
+        msg={"welcome back ^^"}
+        type={"success"}
+      />
+      <Notification
+        open={openFail}
+        setOpen={setOpenFail}
+        msg={"Error Missing Fields"}
+        type={"error"}
+      />
     </>
   );
 };

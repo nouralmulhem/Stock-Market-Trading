@@ -49,7 +49,13 @@ const SignUp = () => {
             }
             label={`I agree to the ${(<Link>Terms and Conditions</Link>)}`}
           /> */}
-          <Button color="info" variant="contained" onClick={handleSubmit}>
+
+          <Button
+            type="submit"
+            color="info"
+            variant="contained"
+            onClick={handleSubmit}
+          >
             Sign up
           </Button>
         </FormGroup>
@@ -61,6 +67,7 @@ const SignUp = () => {
       <Notification
         open={open}
         setOpen={setOpen}
+        type={"success"}
         msg={"whohoo successfully submitted"}
       />
     </>
