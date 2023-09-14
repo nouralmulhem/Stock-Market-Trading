@@ -16,13 +16,21 @@ module.exports = {
   plugins: [
     'react',
   ],
+  // settings: [
+  //   import/resolver: {
+  //     node: {          
+  //       paths: ["src"],
+  //       extensions: [".js", ".jsx", ".ts", ".tsx"]
+  //     }
+  //   }
+  // ],
   rules: {
     // Error FL not CRFL
     'linebreak-style': 0,
     // Should tell propes
     'react/prop-types': 0,
     // Shouldn't import jsx in js
-    'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx', 'js'] }],
+    'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx', '.js'] }],
     // console warning
     'no-console': 0,
     // disabling importing React
@@ -32,7 +40,7 @@ module.exports = {
     // disabling prefer default export
     'import/prefer-default-export': 'off',
     // disables line length check
-    'max-len': ['error', { code: 2000 }],
+    'max-len': ['error', { code: 200000 }],
     // disabling disallow nested ternary expressions
     'no-nested-ternary': 'off',
     // disabling props spreading
