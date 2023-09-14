@@ -3,10 +3,10 @@ import { DsInputField } from "./styles";
 import { ChangeEvent } from "react";
 
 type InputFieldProps = {
-  required: boolean;
   color: "info" | "primary" | "secondary";
   label: string;
   variant: TextFieldVariants | undefined;
+  required?: boolean;
   type?: "email" | "password";
   onChange?: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   size?: "small" | "medium";

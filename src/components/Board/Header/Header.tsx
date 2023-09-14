@@ -32,6 +32,10 @@ const tabs = {
     text: "Stocks",
     icon: <ShowChartIcon sx={{ mr: 0.5 }} fontSize="inherit" />,
   },
+  profile: {
+    text: "Profile",
+    icon: <PersonIcon sx={{ mr: 0.5 }} fontSize="inherit" />,
+  },
 };
 
 const renderer = (param: string | undefined) => {
@@ -44,6 +48,8 @@ const renderer = (param: string | undefined) => {
       return tabs.investors;
     case "stocks":
       return tabs.stocks;
+    case "profile":
+      return tabs.profile;
     default:
       return null;
   }
@@ -79,14 +85,8 @@ const Header = () => {
           </Typography>
         </Breadcrumbs>
       </Box>
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
+      <Box display={"flex"} alignItems={"center"}>
         <InputField
-          required
           color="info"
           label="Search"
           variant="outlined"

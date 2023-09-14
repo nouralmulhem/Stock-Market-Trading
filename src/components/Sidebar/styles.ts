@@ -1,4 +1,4 @@
-import { Divider, List, ListItem, Paper } from "@mui/material";
+import { List, ListItem, Paper } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 interface DsListItemProps {
@@ -18,20 +18,6 @@ export const Container = styled(Paper)(({ theme }) => ({
   paddingBottom: 15,
   paddingLeft: 15,
   paddingRight: 15,
-}));
-
-export const DsDivider = styled(Divider)(({ theme }) => ({
-  flexShrink: 0,
-  borderTop: "0px solid rgba(0, 0, 0, 0.12)",
-  borderRight: "0px solid rgba(0, 0, 0, 0.12)",
-  borderLeft: "0px solid rgba(0, 0, 0, 0.12)",
-  backgroundColor: "transparent",
-  height: "0.0625rem",
-  margin: "1rem 0px",
-  borderBottom: "none",
-  opacity: 0.25,
-  backgroundImage:
-    "linear-gradient(to right, rgba(52, 71, 103, 0), rgb(255, 255, 255), rgba(52, 71, 103, 0)) !important",
 }));
 
 export const DsList = styled(List)(({ theme }) => ({

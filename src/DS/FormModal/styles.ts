@@ -12,6 +12,7 @@ type DsChildPaperProps = {
 
 export const DsPaper = styled(Paper)<DsPaperProps>(({ theme, paddingTop }) => ({
   minHeight: "60%",
+  minWidth: "500px",
   margin: "auto",
   padding: 30,
   paddingTop,
@@ -25,8 +26,7 @@ export const DsPaper = styled(Paper)<DsPaperProps>(({ theme, paddingTop }) => ({
 
 export const DsChildPaper = styled(Paper)<DsChildPaperProps>(
   ({ theme, top, position }) => ({
-    width: "75%",
-    margin: "auto",
+    width: "calc(100% - 60px)",
     marginBottom: 30,
     padding: 30,
     top,

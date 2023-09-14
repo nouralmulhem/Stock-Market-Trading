@@ -29,13 +29,11 @@ const DsPlot = (props: DsPlotProps) => {
 
   return (
     <Box
-      sx={{
-        display: "flex",
-        padding: 3,
-        justifyContent: "center",
-        alignItems: "center",
-        gap: 3,
-      }}
+      display={"flex"}
+      alignItems={"center"}
+      gap={3}
+      justifyContent={"center"}
+      padding={3}
     >
       <Plot
         data={[

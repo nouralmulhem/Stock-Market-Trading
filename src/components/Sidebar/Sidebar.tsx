@@ -6,11 +6,13 @@ import {
   Button,
   Box,
 } from "@mui/material";
-import { Container, DsDivider, DsList, DsListItem } from "./styles";
+import { Container, DsList, DsListItem } from "./styles";
 import { useNavigate, useParams } from "react-router-dom";
 import { useIsAdmin } from "../../contexts/useIsAdmin";
 import { useCookies } from "react-cookie";
+import { HorDivider } from "../../DS/Divider/Divider";
 
+// icons
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import ApartmentIcon from "@mui/icons-material/Apartment";
 import PaidIcon from "@mui/icons-material/Paid";
@@ -24,6 +26,7 @@ const ListElementsAdmin = [
 ];
 
 const ListElementsInvestor = [
+  { text: "Dashboard", icon: <DashboardIcon sx={{ color: "white" }} /> },
   { text: "Stocks", icon: <ShowChartIcon sx={{ color: "white" }} /> },
   { text: "Profile", icon: <PersonIcon sx={{ color: "white" }} /> },
 ];
@@ -36,9 +39,9 @@ const Sidebar = () => {
   const ListElements = isAdmin ? ListElementsAdmin : ListElementsInvestor;
 
   const drawer = (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box flexGrow={1}>
       <Toolbar />
-      <DsDivider variant="middle" />
+      <HorDivider />
       <DsList>
         {ListElements.map((entity, index) => (
           <DsListItem

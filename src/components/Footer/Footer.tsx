@@ -3,14 +3,7 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 
 export const Footer: FC = (): ReactElement => {
   return (
-    <Box
-      sx={{
-        width: "100%",
-        paddingBottom: "1rem",
-        bottom: 0,
-        position: "absolute",
-      }}
-    >
+    <Box width={"100%"} paddingBottom={"1rem"} bottom={0} position={"absolute"}>
       <Container maxWidth="lg">
         <Grid container direction="column" alignItems="center">
           <Grid item xs={12}>

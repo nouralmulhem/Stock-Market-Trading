@@ -6,6 +6,7 @@ export type user = {
   name: string;
   type: string;
   username: string;
+  money: number;
 };
 
 type ProviderProps = {

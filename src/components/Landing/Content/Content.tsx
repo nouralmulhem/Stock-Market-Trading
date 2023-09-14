@@ -1,9 +1,5 @@
-import { Button, Typography } from "@mui/material";
-import {
-  ButtonsContainer,
-  LadnginContainer,
-  LandingTypography,
-} from "./styles";
+import { LadnginContainer, LandingTypography } from "./styles";
+import TwoButtons from "../../../DS/TwoButtons/TwoButtons";
 
 const Content = () => {
   return (
@@ -18,14 +14,16 @@ const Content = () => {
         Our landing page template works on all devices, so you only have to set
         it up once, and get beautiful results forever.
       </LandingTypography>
-      <ButtonsContainer>
-        <Button color="primary" variant="contained" size="large">
-          Start free trial
-        </Button>
-        <Button color="secondary" variant="contained" size="large">
-          Learn more
-        </Button>
-      </ButtonsContainer>
+
+      <TwoButtons
+        mainTxt="Start free trial"
+        subTxt="Learn more"
+        mainColor="primary"
+        subColor="secondary"
+        mainVariant="contained"
+        subVariant="contained"
+        size="large"
+      />
     </LadnginContainer>
   );
 };

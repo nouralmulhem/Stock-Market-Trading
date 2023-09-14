@@ -1,36 +1,31 @@
 import { useState } from "react";
 import { BootstrapDialog } from "./styles";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { DsInputField } from "../../../DS/WhiteInput/styles";
-import { Box } from "@mui/material";
-import { useCurrentUser } from "../../../contexts/useCurrentUser";
+import { Box, Typography } from "@mui/material";
+import { useCurrentUser } from "../../../../contexts/useCurrentUser";
+import EuroIcon from "@mui/icons-material/Euro";
 
 // DS components
-import Notification from "../../../DS/Notification/Notification";
-import FormModal from "../../../DS/FormModal/FormModal";
-import TwoButtons from "../../../DS/TwoButtons/TwoButtons";
+import { DsInputField } from "../../../../DS/WhiteInput/styles";
+import Notification from "../../../../DS/Notification/Notification";
+import FormModal from "../../../../DS/FormModal/FormModal";
+import TwoButtons from "../../../../DS/TwoButtons/TwoButtons";
 
-type BuyModalProps = {
+type DepositeProps = {
   open: boolean;
   setOpen: (open: boolean) => void;
 };
 
-const BuyModal = (props: BuyModalProps) => {
+const Deposite = (props: DepositeProps) => {
   const { open, setOpen } = props;
   const { currentUser } = useCurrentUser();
   const [amount, setAmount] = useState<number | undefined>(undefined);
   const [openSuccess, setOpenSuccess] = useState(false);
-  const [openFail, setOpenFail] = useState(false);
 
   const handleSubmit = () => {
-    if (currentUser?.money && amount && amount < currentUser?.money) {
-      setOpenSuccess(true);
-      setTimeout(() => {
-        setOpen(false);
-      }, 3000);
-    } else {
-      setOpenFail(true);
-    }
+    setOpenSuccess(true);
+    setTimeout(() => {
+      setOpen(false);
+    }, 3000);
   };
 
   const handleClose = () => {
@@ -40,14 +35,23 @@ const BuyModal = (props: BuyModalProps) => {
   return (
     <BootstrapDialog onClose={handleClose} open={open}>
       <FormModal
-        page="Purchase"
-        headerIcon={<ShoppingCartIcon sx={{ color: "white" }} />}
+        page="Deposite to your account"
+        headerIcon={<EuroIcon sx={{ color: "white" }} />}
       >
+        <Box
+          display={"flex"}
+          justifyContent={"space-evenly"}
+          width={"100%"}
+          marginBottom={2}
+        >
+          <Typography>Your Current amount:</Typography>
+          <Typography>{currentUser?.money}</Typography>
+        </Box>
         <DsInputField
           type="number"
           color="info"
           variant="outlined"
-          label="amount to purchase"
+          label="amount to deposite"
           fullWidth
           onChange={(e) => {
             setAmount(Number(e.target.value));
@@ -69,17 +73,11 @@ const BuyModal = (props: BuyModalProps) => {
       <Notification
         open={openSuccess}
         setOpen={setOpenSuccess}
-        msg={"wohooo your share is ready"}
+        msg={"wohooo money will be added to your account once i have a backend"}
         type={"success"}
-      />
-      <Notification
-        open={openFail}
-        setOpen={setOpenFail}
-        msg={"Error Can't buy more than you have"}
-        type={"error"}
       />
     </BootstrapDialog>
   );
 };
 
-export default BuyModal;
+export default Deposite;

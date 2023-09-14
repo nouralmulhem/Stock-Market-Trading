@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <Box sx={{ flexGrow: 1, backgroundColor: "#000000de" }}>
+    <Box flexGrow={1} bgcolor={"#000000de"}>
       <DsAppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Stock Market Trading
           </Typography>
-          <Box sx={{ display: "flex", gap: 2 }}>
+          <Box display={"flex"} gap={2}>
             <Button
               color="inherit"
               size="small"

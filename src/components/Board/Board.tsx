@@ -5,13 +5,15 @@ import Dashboard from "../AdminView/Dashboard/Dashboard";
 import Companies from "../AdminView/Companies/Companies";
 import Investors from "../AdminView/Investors/Investors";
 import Stocks from "../InvestorView/Stocks/Stocks";
+import Profile from "../InvestorView/Profile/Profile";
+// import { useCurrentUser } from "../../contexts/useCurrentUser";
+// import { useEffect } from "react";
 
 const Board = () => {
   // const navigate = useNavigate();
   // const { currentUser } = useCurrentUser();
 
   // useEffect(() => {
-  //   console.log(currentUser);
   //   if (!currentUser) navigate("/authentication/signin");
   // }, [currentUser]);
 
@@ -27,17 +29,17 @@ const Board = () => {
         return <Investors />;
       case "stocks":
         return <Stocks />;
+      case "profile":
+        return <Profile />;
     }
   };
 
   return (
     <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        width: "100%",
-        paddingRight: 4,
-      }}
+      display={"flex"}
+      flexDirection={"column"}
+      width={"100%"}
+      paddingRight={4}
     >
       <Header />
       {renderer(param)}

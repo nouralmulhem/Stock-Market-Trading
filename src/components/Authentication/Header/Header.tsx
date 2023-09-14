@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <AuthHeader>
       <Typography>Stock Market Login</Typography>
-      <Box sx={{ display: "flex", gap: 2 }}>
+      <Box display={"flex"} gap={1}>
         <AuthHeaderBtn startIcon={<DashboardIcon sx={{ color: "#7b809a" }} />}>
           Dashboard
         </AuthHeaderBtn>

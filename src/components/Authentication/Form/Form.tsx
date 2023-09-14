@@ -17,7 +17,7 @@ const Form = (props: FormProps) => {
         <Typography variant="h4" fontWeight={"bold"}>
           {page}
         </Typography>
-        <Box sx={{ display: "flex", gap: 1 }}>
+        <Box display={"flex"} gap={1}>
           <IconButton color="inherit">
             <FacebookIcon />
           </IconButton>

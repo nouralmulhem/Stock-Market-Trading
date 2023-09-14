@@ -1,7 +1,7 @@
 import { FormControl, FormGroup, Typography, Button } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import { useCallback, useState } from "react";
-import Notification from "../Notification/Notification";
+import Notification from "../../../../DS/Notification/Notification";
 import InputField from "../../../../DS/WhiteInput/InputField";
 
 const SignUp = () => {

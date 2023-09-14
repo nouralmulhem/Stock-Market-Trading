@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 type InputProps = {
-  color?: string,
+  color?: string;
 };
 
 export const LadnginContainer = styled(Box)(({ theme }) => ({
@@ -15,17 +15,12 @@ export const LadnginContainer = styled(Box)(({ theme }) => ({
   width: "60%",
   margin: "auto",
   textAlign: "center",
-  color: '#fff',
+  color: "#fff",
 }));
 
-export const ButtonsContainer = styled(Box)(({}) => ({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  gap: "1rem",
-}));
-
-export const LandingTypography = styled(Typography)<InputProps>(({ color }) => ({
-  color,
-  display: "inline",
-}));
+export const LandingTypography = styled(Typography)<InputProps>(
+  ({ color }) => ({
+    color,
+    display: "inline",
+  })
+);

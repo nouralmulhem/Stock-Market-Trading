@@ -10,7 +10,7 @@ import { useCallback, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { getUserInfo } from "./server";
 import { useCookies } from "react-cookie";
-import Notification from "../Notification/Notification";
+import Notification from "../../../../DS/Notification/Notification";
 import { user } from "../../../../contexts/useCurrentUser";
 import InputField from "../../../../DS/WhiteInput/InputField";
 
