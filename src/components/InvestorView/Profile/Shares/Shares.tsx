@@ -1,6 +1,8 @@
 import { Box, Typography, IconButton, Button, Avatar } from "@mui/material";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
 import { HorDivider } from "../../../../DS/Divider/Divider";
+import Confirmation from "./Confirmation/Confirmation";
+import { useState } from "react";
 
 const arr = [
   { src: "/ibm.png", name: "IBM", amount: 876543 },
@@ -10,6 +12,8 @@ const arr = [
 ];
 
 const Shares = () => {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <Box width={"100%"}>
       <Typography
@@ -50,6 +54,9 @@ const Shares = () => {
                 color={"info"}
                 size="small"
                 sx={{ height: "40px" }}
+                onClick={() => {
+                  setOpenModal(true);
+                }}
               >
                 Sell
               </Button>
@@ -58,6 +65,7 @@ const Shares = () => {
           </>
         ))}
       </Box>
+      <Confirmation open={openModal} setOpen={setOpenModal} />
     </Box>
   );
 };

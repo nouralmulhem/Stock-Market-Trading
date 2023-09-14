@@ -5,10 +5,10 @@ import { useCurrentUser } from "../../../../contexts/useCurrentUser";
 import EuroIcon from "@mui/icons-material/Euro";
 
 // DS components
-import { DsInputField } from "../../../../DS/WhiteInput/styles";
 import Notification from "../../../../DS/Notification/Notification";
 import FormModal from "../../../../DS/FormModal/FormModal";
 import TwoButtons from "../../../../DS/TwoButtons/TwoButtons";
+import InputField from "../../../../DS/WhiteInput/InputField";
 
 type DepositeProps = {
   open: boolean;
@@ -47,7 +47,7 @@ const Deposite = (props: DepositeProps) => {
           <Typography>Your Current amount:</Typography>
           <Typography>{currentUser?.money}</Typography>
         </Box>
-        <DsInputField
+        <InputField
           type="number"
           color="info"
           variant="outlined"
