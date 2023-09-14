@@ -11,7 +11,6 @@ import routes from "./routes";
 
 // Material theme
 import theme from "./styles/theme";
-import Footer from "./components/Footer/Footer";
 
 // Cookies
 import { CookiesProvider } from "react-cookie";
@@ -50,7 +49,6 @@ function App() {
           {getRoutes(routes)}
           <Route path="*" element={<Navigate to="/landing" />} />
         </Routes>
-        <Footer />
       </CookiesProvider>
     </ThemeProvider>
   );
