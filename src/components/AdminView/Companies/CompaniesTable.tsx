@@ -1,6 +1,7 @@
-import ApartmentIcon from "@mui/icons-material/Apartment";
-import Table from "../../../DS/Table/Table";
 import { Box, Typography, Button, Avatar } from "@mui/material";
+
+// Ds
+import Table from "../../../DS/Table/Table";
 import { HorDivider } from "../../../DS/Divider/Divider";
 
 type Company = {

@@ -1,10 +1,12 @@
 import { Box, Button, Typography } from "@mui/material";
 import { AuthHeader, AuthHeaderBtn } from "./styles";
+import { Link } from "react-router-dom";
+
+// icons
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import PersonIcon from "@mui/icons-material/Person";
 import KeyIcon from "@mui/icons-material/Key";
-import { Link } from "react-router-dom";
 
 const Header = () => {
   return (

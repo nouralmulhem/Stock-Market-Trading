@@ -9,6 +9,8 @@ import {
 import { BoardHeader } from "./styles";
 import { useNavigate, useParams } from "react-router-dom";
 import { useMemo } from "react";
+
+// DS
 import InputField from "../../../DS/WhiteInput/InputField";
 
 // icons

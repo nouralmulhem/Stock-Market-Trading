@@ -1,8 +1,14 @@
 import { Box, Typography, IconButton } from "@mui/material";
 import CreateIcon from "@mui/icons-material/Create";
+
+// DS
 import { HorDivider } from "../../../DS/Divider/Divider";
-import { useCurrentUser } from "../../../contexts/useCurrentUser";
+
+// colors
 import { contentColor } from "../../../styles/colors";
+
+// contexts
+import { useCurrentUser } from "../../../contexts/useCurrentUser";
 
 const Informations = () => {
   const { currentUser } = useCurrentUser();

@@ -1,6 +1,8 @@
 import { DsPaper, DsChildPaper } from "./styles";
 import Table from "../Table/Table";
 import { Typography } from "@mui/material";
+
+// icons
 import ApartmentIcon from "@mui/icons-material/Apartment";
 
 const Stocks = () => {

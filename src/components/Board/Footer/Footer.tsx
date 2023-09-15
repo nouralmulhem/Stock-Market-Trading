@@ -1,5 +1,7 @@
 import { Typography } from "@mui/material";
 import { FooterPaper } from "./styles";
+
+// colors
 import { contentColor } from "../../../styles/colors";
 
 const Footer = () => {

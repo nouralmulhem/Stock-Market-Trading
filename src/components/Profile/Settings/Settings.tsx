@@ -6,6 +6,8 @@ import {
   FormControlLabel,
   Switch,
 } from "@mui/material";
+
+// colors
 import { contentColor } from "../../../styles/colors";
 
 const Settings = () => {

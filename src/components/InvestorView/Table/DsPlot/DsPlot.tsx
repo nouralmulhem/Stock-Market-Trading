@@ -1,10 +1,11 @@
 import { Button } from "@mui/material";
 import Box from "@mui/material/Box";
 import Plot from "react-plotly.js";
-
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useEffect, useState } from "react";
 import { data } from "./data";
+
+// icons
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 type DsPlotProps = {
   setBuyModal: (open: boolean) => void;
@@ -26,6 +27,8 @@ const DsPlot = (props: DsPlotProps) => {
     y_arr = Object.values(data["Time Series (Daily)"]).map(
       (entry) => entry["1. open"]
     );
+    setXaxis(x_arr);
+    setYaxis(y_arr);
   }, []);
 
   return (

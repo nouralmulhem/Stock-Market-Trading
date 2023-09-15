@@ -1,9 +1,13 @@
 import { Box, Typography, IconButton, Button, Avatar } from "@mui/material";
-import ShowChartIcon from "@mui/icons-material/ShowChart";
-import { HorDivider } from "../../../DS/Divider/Divider";
 import Confirmation from "./Confirmation/Confirmation";
 import { useState } from "react";
 import { SharesData } from "./data";
+
+// DS
+import { HorDivider } from "../../../DS/Divider/Divider";
+
+// icons
+import ShowChartIcon from "@mui/icons-material/ShowChart";
 
 const Shares = () => {
   const [openModal, setOpenModal] = useState(false);

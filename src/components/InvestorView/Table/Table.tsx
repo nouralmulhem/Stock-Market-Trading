@@ -1,18 +1,22 @@
-import Collapse from "@mui/material/Collapse";
-import IconButton from "@mui/material/IconButton";
-import TableBody from "@mui/material/TableBody";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
+import {
+  Collapse,
+  IconButton,
+  TableBody,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+} from "@mui/material";
 import { DsTable, DsTableCell } from "./styles";
+import { useState } from "react";
+import BuyModal from "../BuyModal/BuyModal";
 
 //icons
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import { useState } from "react";
+
+// DS
 import DsPlot from "./DsPlot/DsPlot";
-import BuyModal from "../BuyModal/BuyModal";
 
 function createData(
   symbol: string,

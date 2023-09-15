@@ -1,5 +1,7 @@
 import { Box, Typography, IconButton } from "@mui/material";
 import { AuthPaper, ChildPaper } from "./styles";
+
+// icons
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GoogleIcon from "@mui/icons-material/Google";
 import TwitterIcon from "@mui/icons-material/Twitter";

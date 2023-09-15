@@ -10,9 +10,13 @@ import { useCallback, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { getUserInfo } from "./server";
 import { useCookies } from "react-cookie";
+
+// DS
 import Notification from "../../../../DS/Notification/Notification";
-import { user } from "../../../../contexts/useCurrentUser";
 import InputField from "../../../../DS/WhiteInput/InputField";
+
+// contexts
+import { user } from "../../../../contexts/useCurrentUser";
 
 const SignIn = () => {
   const [state, setState] = useState(false);

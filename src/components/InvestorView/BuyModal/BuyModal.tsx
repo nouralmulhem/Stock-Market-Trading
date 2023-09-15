@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { BootstrapDialog } from "./styles";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Box, Typography } from "@mui/material";
+
+// icons
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+
+//contexts
 import { useCurrentUser } from "../../../contexts/useCurrentUser";
 
 // DS components

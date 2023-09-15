@@ -1,6 +1,8 @@
 import { Box, Typography, Button } from "@mui/material";
-import { HorDivider } from "../../../DS/Divider/Divider";
 import { TansictionsArray } from "./data";
+
+// DS
+import { HorDivider } from "../../../DS/Divider/Divider";
 
 type TansictionsProps = {
   username?: string;

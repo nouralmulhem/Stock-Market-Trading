@@ -9,8 +9,12 @@ import {
 } from "@mui/material";
 import { Container, DsList, DsListItem } from "./styles";
 import { useNavigate, useParams } from "react-router-dom";
-import { useIsAdmin } from "../../contexts/useIsAdmin";
 import { useCookies } from "react-cookie";
+
+// contexts
+import { useIsAdmin } from "../../contexts/useIsAdmin";
+
+// DS
 import { HorDivider } from "../../DS/Divider/Divider";
 
 // icons

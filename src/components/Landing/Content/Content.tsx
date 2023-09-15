@@ -1,4 +1,6 @@
 import { LadnginContainer, LandingTypography } from "./styles";
+
+// DS
 import TwoButtons from "../../../DS/TwoButtons/TwoButtons";
 
 const Content = () => {

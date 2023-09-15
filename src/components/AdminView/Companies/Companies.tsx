@@ -10,6 +10,7 @@ import ShowChartIcon from "@mui/icons-material/ShowChart";
 import FormModal from "../../../DS/FormModal/FormModal";
 import InputField from "../../../DS/WhiteInput/InputField";
 import TwoButtons from "../../../DS/TwoButtons/TwoButtons";
+import Notification from "../../../DS/Notification/Notification";
 
 const CompaniesHeader = () => {
   return (
@@ -44,17 +45,19 @@ const newCompanies = [
 
 const Companies = () => {
   const [open, setOpen] = useState(false);
+  const [openSuccess, setOpenSuccess] = useState(false);
+  const [openFail, setOpenFail] = useState(false);
   const [price, setPrice] = useState<undefined | number>(undefined);
 
   const handleSubmit = () => {
-    // if (amount) {
-    //   setOpenSuccess(true);
-    //   setTimeout(() => {
-    //     setOpen(false);
-    //   }, 3000);
-    // } else {
-    //   setOpenFail(true);
-    // }
+    if (price) {
+      setOpenSuccess(true);
+      setTimeout(() => {
+        setOpen(false);
+      }, 3000);
+    } else {
+      setOpenFail(true);
+    }
   };
 
   const handleClose = () => {
@@ -107,6 +110,20 @@ const Companies = () => {
             />
           </Box>
         </FormModal>
+        <Notification
+          open={openSuccess}
+          setOpen={setOpenSuccess}
+          msg={"new price added"}
+          type={"success"}
+          duration={3000}
+        />
+        <Notification
+          open={openFail}
+          setOpen={setOpenFail}
+          msg={"Something Went Wrong !"}
+          type={"error"}
+          duration={3000}
+        />
       </Dialog>
     </>
   );

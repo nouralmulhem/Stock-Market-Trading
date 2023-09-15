@@ -4,9 +4,10 @@ import { DsCard, DsIconCard } from "./styles";
 // icons
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 
+import CountUp from "react-countup";
+
 // DS
 import { HorDivider } from "../../DS/Divider/Divider";
-import CountUp from "react-countup";
 
 // colors
 import { contentColor } from "../../styles/colors";

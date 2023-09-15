@@ -3,9 +3,13 @@ import { BackgroundPaper, ContectPaper } from "./styles";
 import Header from "./Header/Header";
 import Settings from "./Settings/Settings";
 import Informations from "./Informations/Informations";
-import { VerDivider } from "../../DS/Divider/Divider";
-import { useIsAdmin } from "../../contexts/useIsAdmin";
 import Shares from "../InvestorView/Shares/Shares";
+
+// DS
+import { VerDivider } from "../../DS/Divider/Divider";
+
+// contexts
+import { useIsAdmin } from "../../contexts/useIsAdmin";
 
 const Profile = () => {
   const { isAdmin } = useIsAdmin();

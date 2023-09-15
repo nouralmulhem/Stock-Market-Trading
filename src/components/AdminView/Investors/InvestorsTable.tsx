@@ -9,12 +9,12 @@ import {
   Avatar,
 } from "@mui/material";
 import { DsTable, DsTableCell } from "./styles";
+import { useState } from "react";
+import Transactions from "../../InvestorView/Transactions/Transactions";
 
 //icons
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import { useState } from "react";
-import Transactions from "../../InvestorView/Transactions/Transactions";
 
 function createData(
   investorIcon: React.ReactNode,

@@ -1,7 +1,7 @@
 import { useState } from "react";
+import { Box, Typography, Dialog } from "@mui/material";
 
-import { BootstrapDialog } from "./styles";
-import { Box, Typography } from "@mui/material";
+// icons
 import EuroIcon from "@mui/icons-material/Euro";
 
 // DS
@@ -30,7 +30,7 @@ const Confirmation = (props: ConfirmationProps) => {
   };
 
   return (
-    <BootstrapDialog onClose={handleClose} open={open}>
+    <Dialog onClose={handleClose} open={open}>
       <FormModal
         page="Sell Shares"
         headerIcon={<EuroIcon sx={{ color: "white" }} />}
@@ -65,7 +65,7 @@ const Confirmation = (props: ConfirmationProps) => {
         type={"success"}
         duration={3000}
       />
-    </BootstrapDialog>
+    </Dialog>
   );
 };
 
