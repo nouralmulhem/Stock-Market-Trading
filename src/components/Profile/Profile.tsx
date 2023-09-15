@@ -3,10 +3,13 @@ import { BackgroundPaper, ContectPaper } from "./styles";
 import Header from "./Header/Header";
 import Settings from "./Settings/Settings";
 import Informations from "./Informations/Informations";
-import { VerDivider } from "../../../DS/Divider/Divider";
-import Shares from "./Shares/Shares";
+import { VerDivider } from "../../DS/Divider/Divider";
+import { useIsAdmin } from "../../contexts/useIsAdmin";
+import Shares from "../InvestorView/Shares/Shares";
 
 const Profile = () => {
+  const { isAdmin } = useIsAdmin();
+
   return (
     <Box
       display={"flex"}
@@ -22,7 +25,7 @@ const Profile = () => {
           <VerDivider />
           <Informations />
         </Box>
-        <Shares />
+        {!isAdmin && <Shares />}
       </ContectPaper>
     </Box>
   );

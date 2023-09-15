@@ -1,6 +1,13 @@
-import { Box, Breadcrumbs, IconButton, Link, Typography } from "@mui/material";
+import {
+  Box,
+  Breadcrumbs,
+  IconButton,
+  Link,
+  Typography,
+  Badge,
+} from "@mui/material";
 import { BoardHeader } from "./styles";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useMemo } from "react";
 import InputField from "../../../DS/WhiteInput/InputField";
 
@@ -57,6 +64,7 @@ const renderer = (param: string | undefined) => {
 
 const Header = () => {
   const { param } = useParams();
+  const navigate = useNavigate();
   const renered = useMemo(() => {
     return renderer(param);
   }, [param]);
@@ -73,8 +81,11 @@ const Header = () => {
             underline="hover"
             sx={{ display: "flex", alignItems: "center" }}
             color="white"
+            onClick={() => navigate(`/dashboard/dashboard`)}
           >
-            <HomeIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+            <IconButton sx={{ color: "white" }} size="small">
+              <HomeIcon fontSize="inherit" />
+            </IconButton>
           </Link>
           <Typography
             sx={{ display: "flex", alignItems: "center" }}
@@ -99,7 +110,9 @@ const Header = () => {
           <SettingsIcon fontSize="small" sx={{ color: "white" }} />
         </IconButton>
         <IconButton>
-          <NotificationsIcon fontSize="small" sx={{ color: "white" }} />
+          <Badge badgeContent={4} color="primary">
+            <NotificationsIcon fontSize="small" sx={{ color: "white" }} />
+          </Badge>
         </IconButton>
       </Box>
     </BoardHeader>

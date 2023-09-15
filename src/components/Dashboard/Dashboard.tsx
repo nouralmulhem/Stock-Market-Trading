@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import Transactions from "../InvestorView/Transactions/Transactions";
 
 // Ds
 import StatisticsCard from "../../DS/StatisticsCard/StatisticsCard";
@@ -49,21 +50,24 @@ export const Dashboard = () => {
       </Box>
     </Box>
   ) : (
-    <Box display={"flex"} gap={5}>
-      {InvestorStatCardsArray.map((card) => {
-        return (
-          <StatisticsCard
-            key={card.title}
-            Icon={card.icon}
-            title={card.title}
-            value={card.value}
-            color={card.color}
-            percentage={card.percentage}
-            percentageColor={card.percentageColor}
-            time={card.time}
-          />
-        );
-      })}
+    <Box display={"flex"} flexDirection={"column"} gap={1}>
+      <Box display={"flex"} gap={5}>
+        {InvestorStatCardsArray.map((card) => {
+          return (
+            <StatisticsCard
+              key={card.title}
+              Icon={card.icon}
+              title={card.title}
+              value={card.value}
+              color={card.color}
+              percentage={card.percentage}
+              percentageColor={card.percentageColor}
+              time={card.time}
+            />
+          );
+        })}
+      </Box>
+      <Transactions />
     </Box>
   );
 };

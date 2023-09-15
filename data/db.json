@@ -8,7 +8,8 @@
       "type": "Admin",
       "money": 10000,
       "email": "nourml@gmail.com",
-      "objective": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, explicabo laborum? Beatae nam nisi quasi. Odit itaque"
+      "objective": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, explicabo laborum? Beatae nam nisi quasi. Odit itaque",
+      "pic": "/nour.jpeg"
     },
     {
       "id": "eslamA",
@@ -18,7 +19,8 @@
       "type": "Investor",
       "money": 10000,
       "email": "eslamAshraf@gmail.com",
-      "objective": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, explicabo laborum? Beatae nam nisi quasi. Odit itaque"
+      "objective": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, explicabo laborum? Beatae nam nisi quasi. Odit itaque",
+      "pic": "/eslam.jpg"
     }
   ],
   "daily": {

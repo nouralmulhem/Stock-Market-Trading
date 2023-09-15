@@ -4,10 +4,10 @@ import { BootstrapDialog } from "./styles";
 import { Box, Typography } from "@mui/material";
 import EuroIcon from "@mui/icons-material/Euro";
 
-// DS components
-import Notification from "../../../../../DS/Notification/Notification";
-import FormModal from "../../../../../DS/FormModal/FormModal";
-import TwoButtons from "../../../../../DS/TwoButtons/TwoButtons";
+// DS 
+import Notification from "../../../../DS/Notification/Notification";
+import FormModal from "../../../../DS/FormModal/FormModal";
+import TwoButtons from "../../../../DS/TwoButtons/TwoButtons";
 
 type ConfirmationProps = {
   open: boolean;
@@ -44,7 +44,6 @@ const Confirmation = (props: ConfirmationProps) => {
           <Typography variant="h5">
             are you sure you wanted to sell this share?
           </Typography>
-          {/* <Typography>{currentUser?.money}</Typography> */}
         </Box>
         <Box sx={{ marginTop: 2 }}>
           <TwoButtons

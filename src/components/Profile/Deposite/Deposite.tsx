@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { BootstrapDialog } from "./styles";
 import { Box, Typography } from "@mui/material";
-import { useCurrentUser } from "../../../../contexts/useCurrentUser";
 import EuroIcon from "@mui/icons-material/Euro";
 
-// DS components
-import Notification from "../../../../DS/Notification/Notification";
-import FormModal from "../../../../DS/FormModal/FormModal";
-import TwoButtons from "../../../../DS/TwoButtons/TwoButtons";
-import InputField from "../../../../DS/WhiteInput/InputField";
+// contexts
+import { useCurrentUser } from "../../../contexts/useCurrentUser";
+
+// DS
+import Notification from "../../../DS/Notification/Notification";
+import FormModal from "../../../DS/FormModal/FormModal";
+import TwoButtons from "../../../DS/TwoButtons/TwoButtons";
+import InputField from "../../../DS/WhiteInput/InputField";
 
 type DepositeProps = {
   open: boolean;

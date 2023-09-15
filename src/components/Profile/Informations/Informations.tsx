@@ -1,7 +1,7 @@
 import { Box, Typography, IconButton } from "@mui/material";
 import CreateIcon from "@mui/icons-material/Create";
-import { HorDivider } from "../../../../DS/Divider/Divider";
-import { useCurrentUser } from "../../../../contexts/useCurrentUser";
+import { HorDivider } from "../../../DS/Divider/Divider";
+import { useCurrentUser } from "../../../contexts/useCurrentUser";
 
 const contentColor: string = "#cacaca";
 

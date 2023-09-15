@@ -38,18 +38,6 @@ const SignUp = () => {
             type="password"
             variant="outlined"
           />
-          {/* <FormControlLabel
-            control={
-              <Checkbox
-                checked={state}
-                onChange={() => {
-                  setState((prev) => !prev);
-                }}
-              />
-            }
-            label={`I agree to the ${(<Link>Terms and Conditions</Link>)}`}
-          /> */}
-
           <Button
             type="submit"
             color="info"

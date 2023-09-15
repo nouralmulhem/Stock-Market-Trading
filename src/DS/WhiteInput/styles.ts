@@ -10,5 +10,6 @@ export const DsInputField = styled(TextField)(({ theme }) => ({
   },
   input: {
     color: "#fff",
+    textIndent: 10,
   },
 }));

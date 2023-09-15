@@ -1,15 +1,9 @@
 import { Box, Typography, IconButton, Button, Avatar } from "@mui/material";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
-import { HorDivider } from "../../../../DS/Divider/Divider";
+import { HorDivider } from "../../../DS/Divider/Divider";
 import Confirmation from "./Confirmation/Confirmation";
 import { useState } from "react";
-
-const arr = [
-  { src: "/ibm.png", name: "IBM", amount: 876543 },
-  { src: "/msft.png", name: "Microsoft", amount: 34567 },
-  { src: "/atos.png", name: "Atos", amount: 119762 },
-  { src: "/siemens.png", name: "Siemens", amount: 119777 },
-];
+import { SharesData } from "./data";
 
 const Shares = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -30,7 +24,7 @@ const Shares = () => {
         </IconButton>
       </Typography>
       <Box display={"flex"} gap={1} flexDirection={"column"}>
-        {arr.map((item, index) => (
+        {SharesData.map((item, index) => (
           <>
             <Box
               display={"flex"}
@@ -61,7 +55,7 @@ const Shares = () => {
                 Sell
               </Button>
             </Box>
-            {index != arr.length - 1 && <HorDivider />}
+            {index != SharesData.length - 1 && <HorDivider />}
           </>
         ))}
       </Box>

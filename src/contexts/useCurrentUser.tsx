@@ -9,6 +9,7 @@ export type user = {
   money: number;
   objective: string;
   email: string;
+  pic: string;
 };
 
 type ProviderProps = {

@@ -5,7 +5,8 @@ import { Dashboard } from "../Dashboard/Dashboard";
 import Companies from "../AdminView/Companies/Companies";
 import Investors from "../AdminView/Investors/Investors";
 import Stocks from "../InvestorView/Stocks/Stocks";
-import Profile from "../InvestorView/Profile/Profile";
+import Profile from "../Profile/Profile";
+import Footer from "./Footer/Footer";
 
 const Board = () => {
   const { param } = useParams();
@@ -34,6 +35,7 @@ const Board = () => {
     >
       <Header />
       {renderer(param)}
+      <Footer />
     </Box>
   );
 };

@@ -25,6 +25,7 @@ const ListElementsAdmin = [
   { text: "Dashboard", icon: <DashboardIcon sx={{ color: "white" }} /> },
   { text: "Companies", icon: <ApartmentIcon sx={{ color: "white" }} /> },
   { text: "Investors", icon: <PaidIcon sx={{ color: "white" }} /> },
+  { text: "Profile", icon: <PersonIcon sx={{ color: "white" }} /> },
 ];
 
 const ListElementsInvestor = [
