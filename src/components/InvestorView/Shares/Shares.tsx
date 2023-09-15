@@ -1,5 +1,5 @@
 import { Box, Typography, IconButton, Button, Avatar } from "@mui/material";
-import Confirmation from "./Confirmation/Confirmation";
+import ConfirmationModal from "../../../DS/ConfirmationModal/ConfirmationModal";
 import { useState } from "react";
 import { SharesData } from "./data";
 
@@ -8,6 +8,7 @@ import { HorDivider } from "../../../DS/Divider/Divider";
 
 // icons
 import ShowChartIcon from "@mui/icons-material/ShowChart";
+import EuroIcon from "@mui/icons-material/Euro";
 
 const Shares = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -63,7 +64,13 @@ const Shares = () => {
           </>
         ))}
       </Box>
-      <Confirmation open={openModal} setOpen={setOpenModal} />
+      <ConfirmationModal
+        open={openModal}
+        setOpen={setOpenModal}
+        msg={"are you sure you wanted to sell this share?"}
+        title={"Sell Shares"}
+        icon={<EuroIcon sx={{ color: "white" }} />}
+      />
     </Box>
   );
 };

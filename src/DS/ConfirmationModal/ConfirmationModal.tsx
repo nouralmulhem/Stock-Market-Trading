@@ -1,21 +1,21 @@
 import { useState } from "react";
 import { Box, Typography, Dialog } from "@mui/material";
 
-// icons
-import EuroIcon from "@mui/icons-material/Euro";
-
 // DS
-import Notification from "../../../../DS/Notification/Notification";
-import FormModal from "../../../../DS/FormModal/FormModal";
-import TwoButtons from "../../../../DS/TwoButtons/TwoButtons";
+import Notification from "../Notification/Notification";
+import FormModal from "../FormModal/FormModal";
+import TwoButtons from "../TwoButtons/TwoButtons";
 
 type ConfirmationProps = {
   open: boolean;
   setOpen: (open: boolean) => void;
+  msg: string;
+  title: string;
+  icon: JSX.Element;
 };
 
-const Confirmation = (props: ConfirmationProps) => {
-  const { open, setOpen } = props;
+const ConfirmationModal = (props: ConfirmationProps) => {
+  const { open, setOpen, msg, title, icon } = props;
   const [openSuccess, setOpenSuccess] = useState(false);
 
   const handleSubmit = () => {
@@ -31,19 +31,14 @@ const Confirmation = (props: ConfirmationProps) => {
 
   return (
     <Dialog onClose={handleClose} open={open}>
-      <FormModal
-        page="Sell Shares"
-        headerIcon={<EuroIcon sx={{ color: "white" }} />}
-      >
+      <FormModal page={title} headerIcon={icon}>
         <Box
           display={"flex"}
           justifyContent={"space-evenly"}
           width={"100%"}
           marginBottom={2}
         >
-          <Typography variant="h5">
-            are you sure you wanted to sell this share?
-          </Typography>
+          <Typography variant="h5">{msg}</Typography>
         </Box>
         <Box sx={{ marginTop: 2 }}>
           <TwoButtons
@@ -69,4 +64,4 @@ const Confirmation = (props: ConfirmationProps) => {
   );
 };
 
-export default Confirmation;
+export default ConfirmationModal;
