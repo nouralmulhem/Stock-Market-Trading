@@ -34,21 +34,27 @@ function createData(
 
 const InvestorsArray = [
   {
-    investorIcon: <Avatar src="/nour.jpeg" variant="rounded" />,
+    investorIcon: (
+      <Avatar src="/Stock-Market-Trading/nour.jpeg" variant="rounded" />
+    ),
     investorName: "Nour",
     transiction: "30 / 09 / 2023",
     money: "936000",
     shares: "23",
   },
   {
-    investorIcon: <Avatar src="/eslam.jpg" variant="rounded" />,
+    investorIcon: (
+      <Avatar src="/Stock-Market-Trading/eslam.jpg" variant="rounded" />
+    ),
     investorName: "Eslam",
     transiction: "08 / 11 / 2022",
     money: "65000",
     shares: "9",
   },
   {
-    investorIcon: <Avatar src="/dad.jpg" variant="rounded" />,
+    investorIcon: (
+      <Avatar src="/Stock-Market-Trading/dad.jpg" variant="rounded" />
+    ),
     investorName: "Ziad",
     transiction: "07 / 10 / 2024",
     money: "936999000",

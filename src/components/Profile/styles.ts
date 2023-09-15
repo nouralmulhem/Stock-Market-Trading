@@ -11,7 +11,7 @@ export const BackgroundPaper = styled(Paper)(({ theme }) => ({
   color: " rgb(52, 71, 103)",
   boxShadow: "none",
   background:
-    "linear-gradient(195deg, rgba(73, 163, 241, 0.6), rgba(26, 115, 232, 0.6)) 50% center / cover, url(/bg2.jpeg) transparent",
+    "linear-gradient(195deg, rgba(73, 163, 241, 0.6), rgba(26, 115, 232, 0.6)) 50% center / cover, url(/Stock-Market-Trading/bg2.jpeg) transparent",
   borderRadius: "0.75rem",
   backgroundPosition: "50% center",
   overflow: "hidden",

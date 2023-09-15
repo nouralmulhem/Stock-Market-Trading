@@ -31,16 +31,16 @@ const NewCompaniesHeader = () => {
 };
 
 const companies = [
-  { src: "/ibm.png", name: "IBM", amount: 13 },
-  { src: "/msft.png", name: "Microsoft", amount: 30 },
-  { src: "/atos.png", name: "Atos", amount: 7 },
-  { src: "/siemens.png", name: "Siemens", amount: 14 },
+  { src: "/Stock-Market-Trading/ibm.png", name: "IBM", amount: 13 },
+  { src: "/Stock-Market-Trading/msft.png", name: "Microsoft", amount: 30 },
+  { src: "/Stock-Market-Trading/atos.png", name: "Atos", amount: 7 },
+  { src: "/Stock-Market-Trading/siemens.png", name: "Siemens", amount: 14 },
 ];
 
 const newCompanies = [
-  { src: "/tensor.png", name: "Tensor Graph" },
-  { src: "/atos.png", name: "Avelable" },
-  { src: "/raisa.png", name: "Raisa Energy" },
+  { src: "/Stock-Market-Trading/tensor.png", name: "Tensor Graph" },
+  { src: "/Stock-Market-Trading/atos.png", name: "Avelable" },
+  { src: "/Stock-Market-Trading/raisa.png", name: "Raisa Energy" },
 ];
 
 const Companies = () => {

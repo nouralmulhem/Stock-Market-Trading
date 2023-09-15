@@ -59,8 +59,16 @@ const Deposite = (props: DepositeProps) => {
           alignItems={"center"}
         >
           <Box display={"flex"} alignItems={"center"}>
-            <Avatar src={"/visa.png"} alt="user" variant="rounded" />
-            <Avatar src={"/ms.png"} alt="user" variant="rounded" />
+            <Avatar
+              src={"/Stock-Market-Trading/visa.png"}
+              alt="user"
+              variant="rounded"
+            />
+            <Avatar
+              src={"/Stock-Market-Trading/ms.png"}
+              alt="user"
+              variant="rounded"
+            />
             <Typography marginLeft={2}>
               you card info: **** **** **** 1986
             </Typography>
