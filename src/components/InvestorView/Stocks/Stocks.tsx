@@ -1,25 +1,26 @@
-import { DsPaper, DsChildPaper } from "./styles";
-import Table from "../Table/Table";
-import { Typography } from "@mui/material";
+import { StocksTable } from "../StocksTable/StocksTable";
+
+// DS
+import Table from "../../../DS/Table/Table";
 
 // icons
 import ApartmentIcon from "@mui/icons-material/Apartment";
 
+const Header = () => {
+  return (
+    <>
+      <ApartmentIcon />
+      Companies and Stocks
+    </>
+  );
+};
+
 const Stocks = () => {
   return (
     <>
-      <DsPaper elevation={3}>
-        <DsChildPaper elevation={3}>
-          <Typography
-            variant="h5"
-            sx={{ display: "flex", alignItems: "center", gap: 1 }}
-          >
-            <ApartmentIcon />
-            Companies and Stocks
-          </Typography>
-        </DsChildPaper>
-        <Table />
-      </DsPaper>
+      <Table header={<Header />}>
+        <StocksTable />
+      </Table>
     </>
   );
 };

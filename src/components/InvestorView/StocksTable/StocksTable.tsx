@@ -76,7 +76,7 @@ function Row(props: {
   );
 }
 
-export default function Table() {
+export function StocksTable() {
   const [buyModal, setBuyModal] = useState(false);
 
   return (
