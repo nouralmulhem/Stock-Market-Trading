@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { DsTable, DsTableCell } from "./styles";
 import { useState } from "react";
+import { InvestorsArray } from "./data";
 import Transactions from "../../InvestorView/Transactions/Transactions";
 
 //icons
@@ -17,7 +18,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
 function createData(
-  investorIcon: React.ReactNode,
+  investorIcon: string,
   investorName: string,
   transiction: string,
   money: string,
@@ -32,41 +33,8 @@ function createData(
   };
 }
 
-const InvestorsArray = [
-  {
-    investorIcon: (
-      <Avatar src="/Stock-Market-Trading/nour.jpeg" variant="rounded" />
-    ),
-    investorName: "Nour",
-    transiction: "30 / 09 / 2023",
-    money: "936000",
-    shares: "23",
-  },
-  {
-    investorIcon: (
-      <Avatar src="/Stock-Market-Trading/eslam.jpg" variant="rounded" />
-    ),
-    investorName: "Eslam",
-    transiction: "08 / 11 / 2022",
-    money: "65000",
-    shares: "9",
-  },
-  {
-    investorIcon: (
-      <Avatar src="/Stock-Market-Trading/dad.jpg" variant="rounded" />
-    ),
-    investorName: "Ziad",
-    transiction: "07 / 10 / 2024",
-    money: "936999000",
-    shares: "12",
-  },
-];
-
-function Row(props: {
-  row: ReturnType<typeof createData>;
-  setBuyModal: (open: boolean) => void;
-}) {
-  const { row, setBuyModal } = props;
+function Row(props: { row: ReturnType<typeof createData> }) {
+  const { row } = props;
   const [open, setOpen] = useState(false);
 
   return (
@@ -87,7 +55,7 @@ function Row(props: {
           scope="row"
           sx={{ display: "flex", alignItems: "center", gap: 2, height: "50px" }}
         >
-          {row.investorIcon}
+          <Avatar src={row.investorIcon} variant="rounded" />
           {row.investorName}
         </DsTableCell>
         <DsTableCell>{row.transiction}</DsTableCell>
@@ -106,8 +74,6 @@ function Row(props: {
 }
 
 const InvestorsTable = () => {
-  const [buyModal, setBuyModal] = useState(false);
-
   return (
     <>
       <TableContainer component={Paper} sx={{ backgroundColor: "unset" }}>
@@ -123,7 +89,7 @@ const InvestorsTable = () => {
           </TableHead>
           <TableBody>
             {InvestorsArray.map((row) => (
-              <Row key={row.investorName} row={row} setBuyModal={setBuyModal} />
+              <Row key={row.investorName} row={row} />
             ))}
           </TableBody>
         </DsTable>
