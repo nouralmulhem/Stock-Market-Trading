@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import { DsTable, DsTableCell } from "./styles";
 import { useState } from "react";
+import { createData, rows } from "./data";
 import BuyModal from "../BuyModal/BuyModal";
 
 //icons
@@ -17,26 +18,6 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
 // DS
 import DsPlot from "./DsPlot/DsPlot";
-
-function createData(
-  symbol: string,
-  lastRefreshed: string,
-  output: string,
-  time: string
-) {
-  return {
-    symbol,
-    lastRefreshed,
-    output,
-    time,
-  };
-}
-
-const rows = [
-  createData("IBM", "2023-09-13", "Compact", "US/Eastern"),
-  createData("FB", "2023-09-14", "Compact", "US/Eastern"),
-  createData("MSFT", "2023-09-9", "Compact", "US/Eastern"),
-];
 
 function Row(props: {
   row: ReturnType<typeof createData>;

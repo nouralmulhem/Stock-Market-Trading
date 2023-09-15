@@ -88,7 +88,6 @@ const Sidebar = () => {
         variant="contained"
         onClick={() => {
           removeCookie("user", { path: "/" });
-          // window.location.href = "/authentication/signin";
           navigate("/authentication/signin");
         }}
       >

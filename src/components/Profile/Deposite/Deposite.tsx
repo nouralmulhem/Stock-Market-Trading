@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { BootstrapDialog } from "./styles";
-import { Avatar, Box, IconButton, Typography } from "@mui/material";
+import { Avatar, Box, IconButton, Typography, Dialog } from "@mui/material";
 
 // icons
 import EuroIcon from "@mui/icons-material/Euro";
@@ -46,7 +45,7 @@ const Deposite = (props: DepositeProps) => {
   };
 
   return (
-    <BootstrapDialog onClose={handleClose} open={open}>
+    <Dialog onClose={handleClose} open={open}>
       <FormModal
         page="Deposite to your account"
         headerIcon={<EuroIcon sx={{ color: "white" }} />}
@@ -124,7 +123,7 @@ const Deposite = (props: DepositeProps) => {
         type={"error"}
         duration={3000}
       />
-    </BootstrapDialog>
+    </Dialog>
   );
 };
 
