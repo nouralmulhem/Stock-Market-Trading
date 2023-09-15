@@ -336,4 +336,4 @@ npm run start
 
 ## 🔒 License <a id ="license"></a>
 
-> **Note**: This software is licensed under MIT License, See [License](https://github.com/nouralmulhem/Stock-Market-Trading/blob/main/LICENSE) for more information ©NonLegit.
+> **Note**: This software is licensed under MIT License, See [License](https://github.com/nouralmulhem/Stock-Market-Trading/blob/main/LICENSE) for more information ©StockMarket.
