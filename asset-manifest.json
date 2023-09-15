@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Stock-Market-Trading/static/css/main.f1a4ce7c.css",
-    "main.js": "/Stock-Market-Trading/static/js/main.32b0ae1d.js",
+    "main.js": "/Stock-Market-Trading/static/js/main.00f565b5.js",
     "index.html": "/Stock-Market-Trading/index.html",
     "main.f1a4ce7c.css.map": "/Stock-Market-Trading/static/css/main.f1a4ce7c.css.map",
-    "main.32b0ae1d.js.map": "/Stock-Market-Trading/static/js/main.32b0ae1d.js.map"
+    "main.00f565b5.js.map": "/Stock-Market-Trading/static/js/main.00f565b5.js.map"
   },
   "entrypoints": [
     "static/css/main.f1a4ce7c.css",
-    "static/js/main.32b0ae1d.js"
+    "static/js/main.00f565b5.js"
   ]
 }
