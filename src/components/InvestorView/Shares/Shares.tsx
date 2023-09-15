@@ -1,9 +1,9 @@
 import { Box, Typography, IconButton, Button, Avatar } from "@mui/material";
-import ConfirmationModal from "../../../DS/ConfirmationModal/ConfirmationModal";
 import { useState } from "react";
 import { SharesData } from "./data";
 
 // DS
+import ConfirmationModal from "../../../DS/ConfirmationModal/ConfirmationModal";
 import { HorDivider } from "../../../DS/Divider/Divider";
 
 // icons

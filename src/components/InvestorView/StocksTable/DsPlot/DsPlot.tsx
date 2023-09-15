@@ -18,18 +18,16 @@ const DsPlot = (props: DsPlotProps) => {
   let x_arr: string[] = [];
   let y_arr: string[] = [];
 
-  // tries to use a backend call but need premium
+  // tries to use a backend call but need premium so i used my own data
   useEffect(() => {
     const timeSeries = data["Time Series (Daily)"];
-    for (var key in timeSeries) {
+    for (const [key, { "1. open": value }] of Object.entries(timeSeries)) {
       x_arr.push(key);
+      y_arr.push(value);
     }
-    y_arr = Object.values(data["Time Series (Daily)"]).map(
-      (entry) => entry["1. open"]
-    );
     setXaxis(x_arr);
     setYaxis(y_arr);
-  }, []);
+  }, [data]);
 
   return (
     <Box

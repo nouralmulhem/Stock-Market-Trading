@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { BootstrapDialog } from "./styles";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Dialog } from "@mui/material";
 
 // icons
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
@@ -42,7 +41,7 @@ const BuyModal = (props: BuyModalProps) => {
   };
 
   return (
-    <BootstrapDialog onClose={handleClose} open={open}>
+    <Dialog onClose={handleClose} open={open}>
       <FormModal
         page="Purchase"
         headerIcon={<ShoppingCartIcon sx={{ color: "white" }} />}
@@ -93,7 +92,7 @@ const BuyModal = (props: BuyModalProps) => {
         type={"error"}
         duration={3000}
       />
-    </BootstrapDialog>
+    </Dialog>
   );
 };
 

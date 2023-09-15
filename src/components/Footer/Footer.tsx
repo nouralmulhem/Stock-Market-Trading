@@ -1,7 +1,6 @@
-import React, { FC, ReactElement } from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
 
-export const Footer: FC = (): ReactElement => {
+const Footer = () => {
   return (
     <Box width={"100%"} paddingBottom={"1rem"} bottom={0} position={"absolute"}>
       <Container maxWidth="lg">
