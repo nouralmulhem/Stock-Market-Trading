@@ -53,7 +53,7 @@
 <br>
 <li>
 You can view
-<a href="https://github.com/nouralmulhem/Stock-Market-Trading">StockTradingMarket</a>
+<a href="https://nouralmulhem.github.io/Stock-Market-Trading/">StockTradingMarket</a>
 
 > **Note**: This deployment is built using json server
 
@@ -336,4 +336,4 @@ npm run start
 
 ## 🔒 License <a id ="license"></a>
 
-> **Note**: This software is licensed under MIT License, See [License](https://github.com/NonLegit/Front-End/blob/development/LICENSE) for more information ©NonLegit.
+> **Note**: This software is licensed under MIT License, See [License](https://github.com/nouralmulhem/Stock-Market-Trading/blob/main/LICENSE) for more information ©NonLegit.
