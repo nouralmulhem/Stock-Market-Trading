@@ -1,5 +1,11 @@
 import { Button, Paper } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import { Link } from "react-router-dom";
+
+type Props = {
+  component?: typeof Link;
+  to?: string;
+};
 
 export const AuthHeader = styled(Paper)(({ theme }) => ({
   width: "70%",
@@ -16,7 +22,7 @@ export const AuthHeader = styled(Paper)(({ theme }) => ({
   justifyContent: "space-between",
 }));
 
-export const AuthHeaderBtn = styled(Button)(({ theme }) => ({
+export const AuthHeaderBtn = styled(Button)<Props>(({ theme }) => ({
   color: "#fff",
   textDecoration: "none",
 }));

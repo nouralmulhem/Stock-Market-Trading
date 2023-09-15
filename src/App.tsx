@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // react-router components
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
@@ -15,6 +15,12 @@ import theme from "./styles/theme";
 // Cookies
 import { CookiesProvider } from "react-cookie";
 
+// current user
+import { CurrentUserProvider } from "./contexts/useCurrentUser";
+
+// notification from DS
+import Notification from "./DS/Notification/Notification";
+
 function App() {
   const { pathname } = useLocation();
 
@@ -25,10 +31,6 @@ function App() {
 
   const getRoutes = (allRoutes: any) =>
     allRoutes.map((route: any) => {
-      if (route.collapse) {
-        return getRoutes(route.collapse);
-      }
-
       if (route.route) {
         return (
           <Route
@@ -45,10 +47,12 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CookiesProvider>
-        <Routes>
-          {getRoutes(routes)}
-          <Route path="*" element={<Navigate to="/landing" />} />
-        </Routes>
+        <CurrentUserProvider>
+          <Routes>
+            {getRoutes(routes)}
+            <Route path="*" element={<Navigate to="/landing" />} />
+          </Routes>
+        </CurrentUserProvider>
       </CookiesProvider>
     </ThemeProvider>
   );

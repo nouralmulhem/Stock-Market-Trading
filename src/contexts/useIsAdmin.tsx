@@ -19,7 +19,7 @@ export function IsAdminProvider({ children }: ProviderProps) {
 
   useEffect(() => {
     if (cookies.user) {
-      setIsAdmin(cookies.user.type === "admin");
+      setIsAdmin(cookies.user.type === "Admin");
     }
   }, [cookies]);
 

@@ -1,30 +1,36 @@
-import { Box, Button, Icon, Tab, Tabs, Typography } from "@mui/material";
-import React from "react";
+import { Box, Button, Typography } from "@mui/material";
 import { AuthHeader, AuthHeaderBtn } from "./styles";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import PersonIcon from "@mui/icons-material/Person";
 import KeyIcon from "@mui/icons-material/Key";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <AuthHeader>
       <Typography>Stock Market Login</Typography>
       <Box display={"flex"} gap={1}>
-        <AuthHeaderBtn startIcon={<DashboardIcon sx={{ color: "#7b809a" }} />}>
+        <AuthHeaderBtn
+          component={Link}
+          to="/dashboard/dashboard"
+          startIcon={<DashboardIcon sx={{ color: "#7b809a" }} />}
+        >
           Dashboard
         </AuthHeaderBtn>
         <AuthHeaderBtn startIcon={<PersonIcon sx={{ color: "#7b809a" }} />}>
           Profile
         </AuthHeaderBtn>
         <AuthHeaderBtn
-          href="/authentication/signup"
+          component={Link}
+          to="/authentication/signup"
           startIcon={<AccountCircleIcon sx={{ color: "#7b809a" }} />}
         >
           Sign up
         </AuthHeaderBtn>
         <AuthHeaderBtn
-          href="/authentication/signin"
+          component={Link}
+          to="/authentication/signin"
           startIcon={<KeyIcon sx={{ color: "#7b809a" }} />}
         >
           Sign in

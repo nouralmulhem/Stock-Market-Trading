@@ -26,11 +26,17 @@ const SignIn = () => {
   const handleSubmit = useCallback(() => {
     if (username && password) {
       const userInfo = getUserInfo<user>(username);
-      userInfo.then((res) => setCookie("user", res, { path: "/" }));
-      setOpenSuccess(true);
-      setTimeout(() => {
-        navigate("/dashboard/dashboard");
-      }, 3000);
+      userInfo
+        .then((res) => {
+          setOpenSuccess(true);
+          setTimeout(() => {
+            navigate("/dashboard/dashboard");
+          }, 3000);
+          setCookie("user", res, { path: "/" });
+        })
+        .catch((error) => {
+          setOpenFail(true);
+        });
     } else setOpenFail(true);
   }, [username, password]);
 
@@ -95,7 +101,7 @@ const SignIn = () => {
       <Notification
         open={openFail}
         setOpen={setOpenFail}
-        msg={"Error Missing Fields"}
+        msg={"Something Went Wrong !"}
         type={"error"}
       />
     </>

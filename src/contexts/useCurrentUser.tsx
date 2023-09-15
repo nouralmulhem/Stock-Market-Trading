@@ -28,6 +28,8 @@ export function CurrentUserProvider({ children }: ProviderProps) {
   useEffect(() => {
     if (cookies.user) {
       setCurrentUser(cookies.user);
+    } else {
+      setCurrentUser(undefined);
     }
   }, [cookies]);
 

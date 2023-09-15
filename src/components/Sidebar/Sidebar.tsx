@@ -5,6 +5,7 @@ import {
   ListItemButton,
   Button,
   Box,
+  Typography,
 } from "@mui/material";
 import { Container, DsList, DsListItem } from "./styles";
 import { useNavigate, useParams } from "react-router-dom";
@@ -18,6 +19,7 @@ import ApartmentIcon from "@mui/icons-material/Apartment";
 import PaidIcon from "@mui/icons-material/Paid";
 import PersonIcon from "@mui/icons-material/Person";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
+import BlurLinearIcon from "@mui/icons-material/BlurLinear";
 
 const ListElementsAdmin = [
   { text: "Dashboard", icon: <DashboardIcon sx={{ color: "white" }} /> },
@@ -40,7 +42,18 @@ const Sidebar = () => {
 
   const drawer = (
     <Box flexGrow={1}>
-      <Toolbar />
+      <Toolbar>
+        <Typography
+          color={"white"}
+          display={"flex"}
+          gap={2}
+          variant={"h6"}
+          alignItems={"center"}
+        >
+          <BlurLinearIcon fontSize="large" />
+          Stock Market
+        </Typography>
+      </Toolbar>
       <HorDivider />
       <DsList>
         {ListElements.map((entity, index) => (
@@ -70,8 +83,8 @@ const Sidebar = () => {
         variant="contained"
         onClick={() => {
           removeCookie("user", { path: "/" });
+          // window.location.href = "/authentication/signin";
           navigate("/authentication/signin");
-          navigate(0);
         }}
       >
         Log out

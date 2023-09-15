@@ -6,17 +6,8 @@ import Companies from "../AdminView/Companies/Companies";
 import Investors from "../AdminView/Investors/Investors";
 import Stocks from "../InvestorView/Stocks/Stocks";
 import Profile from "../InvestorView/Profile/Profile";
-// import { useCurrentUser } from "../../contexts/useCurrentUser";
-// import { useEffect } from "react";
 
 const Board = () => {
-  // const navigate = useNavigate();
-  // const { currentUser } = useCurrentUser();
-
-  // useEffect(() => {
-  //   if (!currentUser) navigate("/authentication/signin");
-  // }, [currentUser]);
-
   const { param } = useParams();
 
   const renderer = (param: string | undefined) => {

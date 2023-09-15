@@ -20,12 +20,17 @@ const Deposite = (props: DepositeProps) => {
   const { currentUser } = useCurrentUser();
   const [amount, setAmount] = useState<number | undefined>(undefined);
   const [openSuccess, setOpenSuccess] = useState(false);
+  const [openFail, setOpenFail] = useState(false);
 
   const handleSubmit = () => {
-    setOpenSuccess(true);
-    setTimeout(() => {
-      setOpen(false);
-    }, 3000);
+    if (amount) {
+      setOpenSuccess(true);
+      setTimeout(() => {
+        setOpen(false);
+      }, 3000);
+    } else {
+      setOpenFail(true);
+    }
   };
 
   const handleClose = () => {
@@ -48,6 +53,7 @@ const Deposite = (props: DepositeProps) => {
           <Typography>{currentUser?.money}</Typography>
         </Box>
         <InputField
+          required
           type="number"
           color="info"
           variant="outlined"
@@ -75,6 +81,12 @@ const Deposite = (props: DepositeProps) => {
         setOpen={setOpenSuccess}
         msg={"wohooo money will be added to your account once i have a backend"}
         type={"success"}
+      />
+      <Notification
+        open={openFail}
+        setOpen={setOpenFail}
+        msg={"Empty Field"}
+        type={"error"}
       />
     </BootstrapDialog>
   );
