@@ -37,9 +37,9 @@ const companies = [
 ];
 
 const newCompanies = [
-  { src: "/ibm.png", name: "Tensor Graph" },
-  { src: "/msft.png", name: "Avelable" },
-  { src: "/atos.png", name: "Raisa Energy" },
+  { src: "/tensor.png", name: "Tensor Graph" },
+  { src: "/atos.png", name: "Avelable" },
+  { src: "/raisa.png", name: "Raisa Energy" },
 ];
 
 const Companies = () => {

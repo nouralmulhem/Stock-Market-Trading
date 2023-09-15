@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { BootstrapDialog } from "./styles";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { DsInputField } from "../../../DS/WhiteInput/styles";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { useCurrentUser } from "../../../contexts/useCurrentUser";
 
 // DS components
 import Notification from "../../../DS/Notification/Notification";
 import FormModal from "../../../DS/FormModal/FormModal";
 import TwoButtons from "../../../DS/TwoButtons/TwoButtons";
+import InputField from "../../../DS/WhiteInput/InputField";
 
 type BuyModalProps = {
   open: boolean;
@@ -43,7 +43,16 @@ const BuyModal = (props: BuyModalProps) => {
         page="Purchase"
         headerIcon={<ShoppingCartIcon sx={{ color: "white" }} />}
       >
-        <DsInputField
+        <Box
+          display={"flex"}
+          justifyContent={"space-between"}
+          width={"100%"}
+          marginBottom={2}
+        >
+          <Typography>Your Current Acount has:</Typography>
+          <Typography>{currentUser?.money} $</Typography>
+        </Box>
+        <InputField
           type="number"
           color="info"
           variant="outlined"
@@ -71,12 +80,14 @@ const BuyModal = (props: BuyModalProps) => {
         setOpen={setOpenSuccess}
         msg={"wohooo your share is ready"}
         type={"success"}
+        duration={3000}
       />
       <Notification
         open={openFail}
         setOpen={setOpenFail}
         msg={"Error Can't buy more than you have"}
         type={"error"}
+        duration={3000}
       />
     </BootstrapDialog>
   );

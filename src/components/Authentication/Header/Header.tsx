@@ -9,11 +9,11 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <AuthHeader>
-      <Typography>Stock Market Login</Typography>
+      <Typography fontWeight={"bold"}>Stock Market Login</Typography>
       <Box display={"flex"} gap={1}>
         <AuthHeaderBtn
           component={Link}
-          to="/dashboard/dashboard"
+          to={"/dashboard/dashboard"}
           startIcon={<DashboardIcon sx={{ color: "#7b809a" }} />}
         >
           Dashboard
@@ -23,14 +23,14 @@ const Header = () => {
         </AuthHeaderBtn>
         <AuthHeaderBtn
           component={Link}
-          to="/authentication/signup"
+          to={"/authentication/signup"}
           startIcon={<AccountCircleIcon sx={{ color: "#7b809a" }} />}
         >
           Sign up
         </AuthHeaderBtn>
         <AuthHeaderBtn
           component={Link}
-          to="/authentication/signin"
+          to={"/authentication/signin"}
           startIcon={<KeyIcon sx={{ color: "#7b809a" }} />}
         >
           Sign in

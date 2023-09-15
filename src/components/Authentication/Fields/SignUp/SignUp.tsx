@@ -57,6 +57,7 @@ const SignUp = () => {
         setOpen={setOpen}
         type={"success"}
         msg={"whohoo successfully submitted"}
+        duration={3000}
       />
     </>
   );

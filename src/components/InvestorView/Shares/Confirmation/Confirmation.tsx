@@ -4,7 +4,7 @@ import { BootstrapDialog } from "./styles";
 import { Box, Typography } from "@mui/material";
 import EuroIcon from "@mui/icons-material/Euro";
 
-// DS 
+// DS
 import Notification from "../../../../DS/Notification/Notification";
 import FormModal from "../../../../DS/FormModal/FormModal";
 import TwoButtons from "../../../../DS/TwoButtons/TwoButtons";
@@ -63,6 +63,7 @@ const Confirmation = (props: ConfirmationProps) => {
         setOpen={setOpenSuccess}
         msg={"wohooo money will be added to your account once i have a backend"}
         type={"success"}
+        duration={3000}
       />
     </BootstrapDialog>
   );

@@ -8,6 +8,9 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 // DS
 import { HorDivider } from "../../DS/Divider/Divider";
 
+// colors
+import { contentColor } from "../../styles/colors";
+
 type DataItem = {
   data: string[];
 };
@@ -37,17 +40,17 @@ const ChartCard = (props: Props) => {
       <Typography color={"white"} variant="h5" fontWeight={"bold"}>
         {title}
       </Typography>
-      <Typography color={"grey"}>{discription}</Typography>
+      <Typography color={contentColor}>{discription}</Typography>
       <HorDivider />
       <Typography
         fontWeight={"bold"}
         display={"flex"}
         alignItems={"center"}
         gap={1}
-        color={"grey"}
+        color={contentColor}
         variant="overline"
       >
-        <AccessTimeIcon fontSize="small" sx={{ color: "grey" }} />
+        <AccessTimeIcon fontSize="small" sx={{ color: contentColor }} />
         {updated}
       </Typography>
     </DsCard>

@@ -19,7 +19,7 @@ const Transactions = (props: TansictionsProps) => {
         height={"36px"}
         marginBottom={3}
       >
-        Previous Trnasictions :-
+        Previous Trnasactions :-
       </Typography>
       <Box display={"flex"} flexDirection={"column"}>
         {TansictionsArray.map((item, index) => (

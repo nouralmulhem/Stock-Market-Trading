@@ -2,8 +2,7 @@ import { Box, Typography, IconButton } from "@mui/material";
 import CreateIcon from "@mui/icons-material/Create";
 import { HorDivider } from "../../../DS/Divider/Divider";
 import { useCurrentUser } from "../../../contexts/useCurrentUser";
-
-const contentColor: string = "#cacaca";
+import { contentColor } from "../../../styles/colors";
 
 const Informations = () => {
   const { currentUser } = useCurrentUser();
@@ -20,25 +19,25 @@ const Informations = () => {
       >
         Profile Information
         <IconButton>
-          <CreateIcon sx={{ color: "grey" }} fontSize="small" />
+          <CreateIcon sx={{ color: contentColor }} fontSize="small" />
         </IconButton>
       </Typography>
       <Typography color={contentColor} variant={"subtitle1"}>
         {currentUser?.objective}{" "}
       </Typography>
       <HorDivider />
-      <Box>
-        <Typography color={"white"} fontWeight={"bold"} variant={"overline"}>
+      <Box marginTop={3}>
+        <Typography color={"white"} fontWeight={"bold"} variant={"subtitle2"}>
           Full Name:{" "}
           <span style={{ color: contentColor }}>{currentUser?.name}</span>
         </Typography>
         <br />
-        <Typography color={"white"} fontWeight={"bold"} variant={"overline"}>
+        <Typography color={"white"} fontWeight={"bold"} variant={"subtitle2"}>
           Email:{" "}
           <span style={{ color: contentColor }}>{currentUser?.email}</span>
         </Typography>
         <br />
-        <Typography color={"white"} fontWeight={"bold"} variant={"overline"}>
+        <Typography color={"white"} fontWeight={"bold"} variant={"subtitle2"}>
           Money:{" "}
           <span style={{ color: contentColor }}>{currentUser?.money}</span>
         </Typography>

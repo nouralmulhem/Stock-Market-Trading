@@ -6,10 +6,11 @@ type NotificationProps = {
   setOpen: (open: boolean) => void;
   msg: string;
   type: AlertColor | undefined;
+  duration: number;
 };
 
 const Notification = (props: NotificationProps) => {
-  const { open, setOpen, msg, type } = props;
+  const { open, setOpen, msg, type, duration } = props;
   const handleClose = useCallback(
     (event?: React.SyntheticEvent | Event, reason?: string) => {
       if (reason === "clickaway") {
@@ -22,7 +23,7 @@ const Notification = (props: NotificationProps) => {
   );
 
   return (
-    <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+    <Snackbar open={open} autoHideDuration={duration} onClose={handleClose}>
       <Alert onClose={handleClose} severity={type} sx={{ width: "100%" }}>
         {msg}
       </Alert>

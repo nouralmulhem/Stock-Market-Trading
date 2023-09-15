@@ -8,6 +8,9 @@ import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import { HorDivider } from "../../DS/Divider/Divider";
 import CountUp from "react-countup";
 
+// colors
+import { contentColor } from "../../styles/colors";
+
 type Props = {
   Icon: typeof PeopleAltIcon;
   title: string;
@@ -41,7 +44,7 @@ const StatisticsCard = (props: Props) => {
         <Typography color={percentageColor} fontWeight={"bold"}>
           {percentage}%{" "}
         </Typography>
-        <Typography color={"grey"} fontWeight={"bold"}>
+        <Typography color={contentColor} fontWeight={"bold"}>
           {time}
         </Typography>
       </Box>

@@ -29,10 +29,10 @@ const SignIn = () => {
       userInfo
         .then((res) => {
           setOpenSuccess(true);
+          setCookie("user", res, { path: "/" });
           setTimeout(() => {
             navigate("/dashboard/dashboard");
-          }, 3000);
-          setCookie("user", res, { path: "/" });
+          }, 1000);
         })
         .catch((error) => {
           setOpenFail(true);
@@ -97,12 +97,14 @@ const SignIn = () => {
         setOpen={setOpenSuccess}
         msg={"welcome back ^^"}
         type={"success"}
+        duration={1000}
       />
       <Notification
         open={openFail}
         setOpen={setOpenFail}
         msg={"Something Went Wrong !"}
         type={"error"}
+        duration={3000}
       />
     </>
   );

@@ -1,12 +1,23 @@
 import { Avatar, Typography, Box, Button } from "@mui/material";
-import { useCurrentUser } from "../../../contexts/useCurrentUser";
-import EuroIcon from "@mui/icons-material/Euro";
-import Deposite from "../Deposite/Deposite";
 import { useState } from "react";
+
+// icons
+import EuroIcon from "@mui/icons-material/Euro";
+
+// components
+import Deposite from "../Deposite/Deposite";
+
+// colors
+import { contentColor } from "../../../styles/colors";
+
+// contexts
+import { useCurrentUser } from "../../../contexts/useCurrentUser";
+import { useIsAdmin } from "../../../contexts/useIsAdmin";
 
 const Header = () => {
   const { currentUser } = useCurrentUser();
   const [openModal, setOpenModal] = useState(false);
+  const { isAdmin } = useIsAdmin();
 
   return (
     <Box display={"flex"} justifyContent={"space-between"}>
@@ -20,22 +31,24 @@ const Header = () => {
           <Typography fontWeight={"bold"} variant="h5" color="white">
             {currentUser?.name}
           </Typography>
-          <Typography fontWeight={"bold"} color="grey">
+          <Typography fontWeight={"bold"} color={contentColor}>
             {currentUser?.type}
           </Typography>
         </Box>
       </Box>
-      <Button
-        startIcon={<EuroIcon />}
-        variant={"contained"}
-        size="small"
-        sx={{ height: "50px" }}
-        onClick={() => {
-          setOpenModal(true);
-        }}
-      >
-        Deposite
-      </Button>
+      {!isAdmin && (
+        <Button
+          startIcon={<EuroIcon />}
+          variant={"contained"}
+          size="small"
+          sx={{ height: "50px" }}
+          onClick={() => {
+            setOpenModal(true);
+          }}
+        >
+          Deposite
+        </Button>
+      )}
       <Deposite open={openModal} setOpen={setOpenModal} />
     </Box>
   );

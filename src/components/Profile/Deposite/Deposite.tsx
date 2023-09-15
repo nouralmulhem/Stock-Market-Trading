@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { BootstrapDialog } from "./styles";
-import { Box, Typography } from "@mui/material";
+import { Avatar, Box, IconButton, Typography } from "@mui/material";
+
+// icons
 import EuroIcon from "@mui/icons-material/Euro";
+import CreateIcon from "@mui/icons-material/Create";
 
 // contexts
 import { useCurrentUser } from "../../../contexts/useCurrentUser";
@@ -11,6 +14,9 @@ import Notification from "../../../DS/Notification/Notification";
 import FormModal from "../../../DS/FormModal/FormModal";
 import TwoButtons from "../../../DS/TwoButtons/TwoButtons";
 import InputField from "../../../DS/WhiteInput/InputField";
+
+// colors
+import { contentColor } from "../../../styles/colors";
 
 type DepositeProps = {
   open: boolean;
@@ -47,12 +53,30 @@ const Deposite = (props: DepositeProps) => {
       >
         <Box
           display={"flex"}
-          justifyContent={"space-evenly"}
+          width={"100%"}
+          marginBottom={2}
+          justifyContent={"space-between"}
+          alignItems={"center"}
+        >
+          <Box display={"flex"} alignItems={"center"}>
+            <Avatar src={"/visa.png"} alt="user" variant="rounded" />
+            <Avatar src={"/ms.png"} alt="user" variant="rounded" />
+            <Typography marginLeft={2}>
+              you card info: **** **** **** 1986
+            </Typography>
+          </Box>
+          <IconButton>
+            <CreateIcon sx={{ color: contentColor }} />
+          </IconButton>
+        </Box>
+        <Box
+          display={"flex"}
+          justifyContent={"space-between"}
           width={"100%"}
           marginBottom={2}
         >
-          <Typography>Your Current amount:</Typography>
-          <Typography>{currentUser?.money}</Typography>
+          <Typography>Your Current Acount has:</Typography>
+          <Typography>{currentUser?.money} $</Typography>
         </Box>
         <InputField
           required
@@ -83,12 +107,14 @@ const Deposite = (props: DepositeProps) => {
         setOpen={setOpenSuccess}
         msg={"wohooo money will be added to your account once i have a backend"}
         type={"success"}
+        duration={3000}
       />
       <Notification
         open={openFail}
         setOpen={setOpenFail}
         msg={"Empty Field"}
         type={"error"}
+        duration={3000}
       />
     </BootstrapDialog>
   );
