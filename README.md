@@ -1,16 +1,13 @@
 <div align= >
-   
 
 # <img align=center width=90px  src="https://media3.giphy.com/media/6otkFoQwGmSRStQSPz/giphy.gif?cid=ecf05e472ffw71at6yd2x8adbn82h4xckjf35f2qzftx4nh7&ep=v1_stickers_search&rid=giphy.gif&ct=s"> Stock market trading
-
 
 </div>
 <div align="center">
    <img align="center"  width="500px" src="https://cdn.dribbble.com/users/4341736/screenshots/15515365/media/bd0c4049732081e05d1b0ad2a5be8bc2.gif" alt="logo">
 
-
 ### ”Invest with Confidence, Trade with Knowledge.💸“
-   
+
 </div>
  
 <p align="center"> 
@@ -22,7 +19,7 @@
 - <a href ="#about"> 📙 Overview</a>
 - <a href ="#started"> 💻 Get Started</a>
 - <a href ="#features"> 🔍 Features</a>
-- <a href ="#video">  📽 GIF Demo</a>
+- <a href ="#video"> 📽 GIF Demo</a>
 - <a href ="#contributors"> ✨ Contributors</a>
 - <a href ="#license"> 🔒 License</a>
 <hr style="background-color: #4b4c60"></hr>
@@ -50,19 +47,20 @@ NonLegit  mimic some functionalities of <a href="https://www.reddit.com/">Reddit
 <a href="https://eslint.org/">eslint</a>
 </li>
 <li>
-<a href="https://jestjs.io/">jest</a>
+<a href="https://www.axios.com/">axios</a>
 </li>
 </ol>
 </li>
-<li>
+<!-- <li>
 <a href="https://github.com/NonLegit/Front-End/blob/development/%5BSoftware%20Engineering%5D%20Project%20F2022.pdf">Project Description</a>
-</li>
+</li> -->
 <br>
 <li>
 You can view
-<a href="https://nonlegit.github.io/Front-End/">Nonleghit</a>
+<a href="https://github.com/nouralmulhem/Stock-Market-Trading">StockTradingMarket</a>
 
 > **Note**: This deployment is built using json server
+
 </li>
 </ul>
 <hr style="background-color: #4b4c60"></hr>
@@ -75,7 +73,7 @@ You can view
 <br>
 
 ```
-git clone https://github.com/NonLegit/Front-End/tree/main
+git clone https://github.com/nouralmulhem/Stock-Market-Trading/tree/main
 ```
 
 </li>
@@ -84,8 +82,9 @@ git clone https://github.com/NonLegit/Front-End/tree/main
 <br>
 
 ```
-npm run server-json 
+npx json-server --watch data/db.json --port 8000
 ```
+
 </li>
 <li>Run the program
 
@@ -94,14 +93,12 @@ npm run server-json
 ```
 npm run start
 ```
+
 </li>
 </ol>
 <hr style="background-color: #4b4c60"></hr>
 
-
-
-## <img  align= center width= 70px height =70px src="https://media1.giphy.com/media/NnSFnC428LRHaxUNzj/giphy.gif?cid=ecf05e47r1hlw9wrf1swakc9gxgn508lyzvbyzgp9i1iyvwl&rid=giphy.gif&ct=s"> Features  <a id ="features"></a>
-
+## <img  align= center width= 70px height =70px src="https://media1.giphy.com/media/NnSFnC428LRHaxUNzj/giphy.gif?cid=ecf05e47r1hlw9wrf1swakc9gxgn508lyzvbyzgp9i1iyvwl&rid=giphy.gif&ct=s"> Features <a id ="features"></a>
 
 <hr style="background-color: #4b4c60"></hr>
 
@@ -154,8 +151,7 @@ npm run start
 
 <hr style="background-color: #4b4c60"></hr>
 
-
-## <img  align= center width= 70px height =70px src="https://img.genial.ly/5f91608064ad990c6ee12237/bd7195a3-a8bb-494b-8a6d-af48dd4deb4b.gif?genial&1643587200063">  GIF Demo <a id ="video"></a>
+## <img  align= center width= 70px height =70px src="https://img.genial.ly/5f91608064ad990c6ee12237/bd7195a3-a8bb-494b-8a6d-af48dd4deb4b.gif?genial&1643587200063"> GIF Demo <a id ="video"></a>
 
 <table align="left;">
 <tr>
@@ -195,8 +191,6 @@ npm run start
 </td>
 </tr>
 </table>
-
-
 
 <hr style="background-color: #4b4c60"></hr>
 

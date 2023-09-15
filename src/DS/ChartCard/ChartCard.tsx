@@ -1,5 +1,27 @@
 import { Typography } from "@mui/material";
 import { DsCard, DsChartCard } from "./styles";
+import { Line } from "react-chartjs-2";
+
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 // icons
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
@@ -9,7 +31,6 @@ import { HorDivider } from "../../DS/Divider/Divider";
 
 // colors
 import { contentColor } from "../../styles/colors";
-import { Line } from "react-chartjs-2";
 
 type Dataset = {
   label: string;
@@ -52,7 +73,6 @@ const ChartCard = (props: Props) => {
           }}
           data={data}
         />
-        {/* <LineChart xAxis={xAxis} series={series} width={500} height={300} /> */}
       </DsChartCard>
       <Typography color={"white"} variant="h5" fontWeight={"bold"}>
         {title}
