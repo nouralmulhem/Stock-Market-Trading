@@ -27,10 +27,6 @@
 ## <img align="center"  height =80px src="https://media0.giphy.com/media/QpyF0jsO26GWKTWctv/giphy.gif?cid=ecf05e4798htjpzjtz6oqwrnlqle5wc1hlauten94gurm6i6&ep=v1_stickers_search&rid=giphy.gif&ct=s"> Overview <a id = "about"></a>
 
 <ul>
-<li>
-NonLegit  mimic some functionalities of <a href="https://www.reddit.com/">Reddit</a>
-</li>
-<li> We are responsible for Front-End part</li>
 <li>The project is built by
 <ol>
 
@@ -74,6 +70,15 @@ You can view
 
 ```
 git clone https://github.com/nouralmulhem/Stock-Market-Trading/tree/main
+```
+
+</li>
+<li>Install packages
+
+<br>
+
+```
+npm install
 ```
 
 </li>
@@ -276,7 +281,7 @@ npm run start
 </tr>
 </table>
 
-<hr style="background-color: #4b4c60"></hr>
+<!-- <hr style="background-color: #4b4c60"></hr>
 
 ## <img  align= center width= 70px height =70px src="https://img.genial.ly/5f91608064ad990c6ee12237/bd7195a3-a8bb-494b-8a6d-af48dd4deb4b.gif?genial&1643587200063"> GIF Demo <a id ="video"></a>
 
@@ -287,16 +292,16 @@ npm run start
 </tr>
 <tr>
 <td  width="83.5%">
-<!-- <video src="https://user-images.githubusercontent.com/71986226/214705509-cb1f10bb-aab2-4252-843b-57249bc10ed3.mp4"   >
-</video>  -->
+<video src="https://user-images.githubusercontent.com/71986226/214705509-cb1f10bb-aab2-4252-843b-57249bc10ed3.mp4"   >
+</video>
 </td>
 <td >
 <ul>
-<!-- <li>Authentication</li>
+<li>Authentication</li>
 <li>Comments</li>
 <li>Notification</li>
 <li>Messages</li>
-<li>Settings</li> -->
+<li>Settings</li>
 </ul>
 </td>
 </tr>
@@ -305,19 +310,19 @@ npm run start
 <table align="left;">
 <tr>
 <td width="80.5%">
-<!-- <video src="https://user-images.githubusercontent.com/71986226/214708909-fccfd917-f8bb-4166-a76d-de1248faa2bd.mp4"   >
-</video>  -->
+<video src="https://user-images.githubusercontent.com/71986226/214708909-fccfd917-f8bb-4166-a76d-de1248faa2bd.mp4"   >
+</video>
 </td>
 <td >
 <ul>
-<!-- <li>Home page</li>
+<li>Home page</li>
 <li>Posts</li>
-<li>Create Post</li> -->
+<li>Create Post</li>
 </ul>
 </td>
 </td>
 </tr>
-</table>
+</table> -->
 
 <hr style="background-color: #4b4c60"></hr>
 
