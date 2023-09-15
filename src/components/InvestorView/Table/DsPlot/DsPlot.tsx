@@ -13,18 +13,19 @@ type DsPlotProps = {
 const DsPlot = (props: DsPlotProps) => {
   const { setBuyModal } = props;
   const [xaxis, setXaxis] = useState<string[]>([]);
-  const [yaxis, setYaxis] = useState<number[]>([]);
+  const [yaxis, setYaxis] = useState<string[]>([]);
   let x_arr: string[] = [];
-  let y_arr: number[] = [];
+  let y_arr: string[] = [];
 
   // tries to use a backend call but need premium
   useEffect(() => {
-    for (var key in data["Time Series (Daily)"]) {
+    const timeSeries = data["Time Series (Daily)"];
+    for (var key in timeSeries) {
       x_arr.push(key);
-      y_arr.push(Math.random() * (290 - 100) + 290);
     }
-    setXaxis(x_arr);
-    setYaxis(y_arr);
+    y_arr = Object.values(data["Time Series (Daily)"]).map(
+      (entry) => entry["1. open"]
+    );
   }, []);
 
   return (

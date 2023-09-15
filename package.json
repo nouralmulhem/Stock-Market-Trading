@@ -18,10 +18,12 @@
     "@types/react-dom": "^18.2.7",
     "@types/react-plotly.js": "^2.6.0",
     "axios": "^1.5.0",
+    "chart.js": "^4.4.0",
     "chroma-js": "^2.4.2",
+    "faker": "^5.5.3",
     "plotly.js": "^2.26.0",
     "react": "^18.2.0",
-    "react-chartjs-2": "5.2.0",
+    "react-chartjs-2": "^5.2.0",
     "react-cookie": "^6.1.1",
     "react-countup": "^6.4.2",
     "react-dom": "^18.2.0",
@@ -56,5 +58,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/faker": "5.5.9",
+    "@faker-js/faker": "^8.0.2"
   }
 }

@@ -14,10 +14,13 @@ export function fetchStock() {
     .then(function (data) {
       for (var key in data["Time Series (Daily)"]) {
         stockChartXValuesFunction.push(key);
-        stockChartYValuesFunction.push(
-          data["Time Series (Daily)"][key]["1. open"]
-        );
+        // stockChartYValuesFunction.push(
+        //   data["Time Series (Daily)"][key]["1. open"]
+        // );
       }
+      stockChartYValuesFunction = Object.values(
+        data["Time Series (Daily)"]
+      ).map((entry: any) => entry["1. open"]);
     });
 
   return [stockChartXValuesFunction, stockChartYValuesFunction];

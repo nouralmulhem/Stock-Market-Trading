@@ -38,8 +38,7 @@ export const Dashboard = () => {
           return (
             <ChartCard
               key={card.title}
-              xAxis={card.xAxis}
-              series={card.series}
+              data={card.data}
               title={card.title}
               discription={card.discription}
               color={card.color}

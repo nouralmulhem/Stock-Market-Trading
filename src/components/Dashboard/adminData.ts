@@ -3,6 +3,7 @@ import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import EuroIcon from "@mui/icons-material/Euro";
 import AirlineStopsIcon from "@mui/icons-material/AirlineStops";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
+import faker from "faker";
 
 export const AdminStatCardsArray = [
   {
@@ -47,72 +48,64 @@ export const AdminStatCardsArray = [
   },
 ];
 
+const labels = [
+  "jan",
+  "feb",
+  "mar",
+  "apr",
+  "may",
+  "jun",
+  "jul",
+  "aug",
+  "sept",
+  "oct",
+];
+
 export const AdminChartCardsArray = [
   {
     key: "1",
-    xAxis: [
-      {
-        scaleType: "point",
-        data: [
-          "jan",
-          "feb",
-          "mar",
-          "apr",
-          "may",
-          "jun",
-          "jul",
-          "aug",
-          "sept",
-          "oct",
-        ],
-      },
-    ],
-    series: [
-      {
-        data: [2, 3, 5.5, 8.5, 1.5, 5, 1, 4, 3, 8],
-        label: "this year",
-        showMark: true,
-      },
-    ],
+    data: {
+      labels,
+      datasets: [
+        {
+          data: [2, 3, 5.5, 8.5, 1.5, 5, 1, 4, 3, 8],
+          label: "this year",
+          borderColor: "#fff",
+          backgroundColor: "#fff",
+        },
+      ],
+    },
     title: "Transactions",
     discription: "Last Campaign Performance",
-    color: "linear-gradient(195deg, rgb(165 213 255), rgb(26 126 255))",
+    color: "linear-gradient(195deg, rgb(102, 187, 106), rgb(67, 160, 71))",
     updated: "Updated 2 hours ago",
   },
   {
     key: "2",
-    xAxis: [
-      {
-        scaleType: "point",
-        data: [
-          "jan",
-          "feb",
-          "mar",
-          "apr",
-          "may",
-          "jun",
-          "jul",
-          "aug",
-          "sept",
-          "oct",
-        ],
-      },
-    ],
-    series: [
-      {
-        data: [9.7, 4.1, 5.9, 3.5, 2.5, 0.8, 5.3, 8, 9.1, 8],
-        label: "this year",
-        showMark: true,
-      },
-      {
-        data: [2, 3, 9.5, 8.5, 0.5, 5, 1, 4, 3, 8],
-        label: "last year",
-        showMark: true,
-      },
-    ],
+    data: {
+      labels,
+      datasets: [
+        {
+          data: labels.map(() =>
+            faker.datatype.number({ min: -1000, max: 1000 })
+          ),
+          label: "this year",
+          borderColor: "#ec407a",
+          backgroundColor: "#ec407a",
+        },
+        {
+          data: labels.map(() =>
+            faker.datatype.number({ min: -1000, max: 1000 })
+          ),
+          label: "last year",
+          borderColor: "#fff",
+          backgroundColor: "#fff",
+        },
+      ],
+    },
     title: "Money",
     discription: "(+15%) increase in today sales.",
-    color: "linear-gradient(195deg, rgb(255 233 241), rgb(255 84 146))",
+    color: "linear-gradient(195deg, rgb(73, 163, 241), rgb(26, 115, 232))",
     updated: "Updated 18 mins ago",
   },
 ];

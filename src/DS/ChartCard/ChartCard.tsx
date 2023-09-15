@@ -1,6 +1,5 @@
 import { Typography } from "@mui/material";
 import { DsCard, DsChartCard } from "./styles";
-import { LineChart } from "@mui/x-charts/LineChart";
 
 // icons
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
@@ -10,19 +9,42 @@ import { HorDivider } from "../../DS/Divider/Divider";
 
 // colors
 import { contentColor } from "../../styles/colors";
+import { Line } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
 
-type DataItem = {
-  data: string[];
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+type Dataset = {
+  label: string;
+  data: number[];
+  borderColor: string;
+  backgroundColor: string;
 };
 
-type DataWithMark = {
-  data: number[];
-  showMark?: boolean;
+type Data = {
+  labels: string[];
+  datasets: Dataset[];
 };
 
 type Props = {
-  xAxis: DataItem[];
-  series: DataWithMark[];
+  data: Data;
   title: string;
   discription: string;
   color: string;
@@ -30,12 +52,27 @@ type Props = {
 };
 
 const ChartCard = (props: Props) => {
-  const { xAxis, series, title, discription, color, updated } = props;
+  const { data, title, discription, color, updated } = props;
 
   return (
     <DsCard elevation={4}>
       <DsChartCard bgcolor={color} elevation={4}>
-        <LineChart xAxis={xAxis} series={series} width={500} height={300} />
+        <Line
+          options={{
+            responsive: true,
+            plugins: {
+              legend: {
+                position: "top" as const,
+              },
+              title: {
+                display: true,
+                text: title,
+              },
+            },
+          }}
+          data={data}
+        />
+        {/* <LineChart xAxis={xAxis} series={series} width={500} height={300} /> */}
       </DsChartCard>
       <Typography color={"white"} variant="h5" fontWeight={"bold"}>
         {title}
