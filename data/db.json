@@ -6,7 +6,9 @@
       "password": 12345,
       "name": "Nour Ziad",
       "type": "Admin",
-      "money": 10000
+      "money": 10000,
+      "email": "nourml@gmail.com",
+      "objective": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, explicabo laborum? Beatae nam nisi quasi. Odit itaque"
     },
     {
       "id": "eslamA",
@@ -14,7 +16,9 @@
       "password": 12345,
       "name": "Eslam Ashraf",
       "type": "Investor",
-      "money": 10000
+      "money": 10000,
+      "email": "eslamAshraf@gmail.com",
+      "objective": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, explicabo laborum? Beatae nam nisi quasi. Odit itaque"
     }
   ],
   "daily": {

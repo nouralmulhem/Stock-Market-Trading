@@ -1,10 +1,13 @@
 import { Box, Typography, IconButton } from "@mui/material";
 import CreateIcon from "@mui/icons-material/Create";
 import { HorDivider } from "../../../../DS/Divider/Divider";
+import { useCurrentUser } from "../../../../contexts/useCurrentUser";
 
 const contentColor: string = "#cacaca";
 
 const Informations = () => {
+  const { currentUser } = useCurrentUser();
+
   return (
     <Box width={"50%"} padding={2}>
       <Typography
@@ -21,22 +24,23 @@ const Informations = () => {
         </IconButton>
       </Typography>
       <Typography color={contentColor} variant={"subtitle1"}>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur,
-        explicabo laborum? Beatae nam nisi quasi. Odit itaque{" "}
+        {currentUser?.objective}{" "}
       </Typography>
       <HorDivider />
       <Box>
         <Typography color={"white"} fontWeight={"bold"} variant={"overline"}>
-          Full Name: <span style={{ color: contentColor }}>Nour Ziad</span>
+          Full Name:{" "}
+          <span style={{ color: contentColor }}>{currentUser?.name}</span>
         </Typography>
         <br />
         <Typography color={"white"} fontWeight={"bold"} variant={"overline"}>
-          Rmail: <span style={{ color: contentColor }}>nourml@gmail.com</span>
+          Email:{" "}
+          <span style={{ color: contentColor }}>{currentUser?.email}</span>
         </Typography>
         <br />
         <Typography color={"white"} fontWeight={"bold"} variant={"overline"}>
-          Money:
-          <span style={{ color: contentColor }}>1000</span>
+          Money:{" "}
+          <span style={{ color: contentColor }}>{currentUser?.money}</span>
         </Typography>
       </Box>
     </Box>

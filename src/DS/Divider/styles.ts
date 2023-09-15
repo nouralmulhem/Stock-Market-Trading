@@ -12,7 +12,7 @@ export const DsHDivider = styled(Divider)(({ theme }) => ({
   borderBottom: "none",
   opacity: 0.25,
   backgroundImage:
-    "linear-gradient(to right, rgba(52, 71, 103, 0), rgb(255, 255, 255), rgba(52, 71, 103, 0)) !important",
+    " linear-gradient(to right, rgba(52, 71, 103, 0), rgb(255, 255, 255), rgba(52, 71, 103, 0)) !important",
 }));
 
 export const DsVDivider = styled(Divider)(({ theme }) => ({
@@ -21,9 +21,9 @@ export const DsVDivider = styled(Divider)(({ theme }) => ({
   borderBottom: "0px solid rgba(0, 0, 0, 0.12)",
   borderLeft: "0px solid rgba(0, 0, 0, 0.12)",
   backgroundColor: "transparent",
+  height: "100%",
   width: "0.0625rem",
   margin: "0px 8px 0px -16px",
-  height: "100%",
   borderRight: "none",
   opacity: 0.25,
   backgroundImage:

@@ -7,6 +7,8 @@ export type user = {
   type: string;
   username: string;
   money: number;
+  objective: string;
+  email: string;
 };
 
 type ProviderProps = {

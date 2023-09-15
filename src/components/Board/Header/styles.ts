@@ -9,8 +9,9 @@ export const BoardHeader = styled(Paper)(({ theme }) => ({
   color: "#fff",
   marginTop: 30,
   marginBottom: 30,
-  backgroundColor: theme.palette.secondary.main,
+  backgroundColor: "transparent",
   display: "flex",
   alignItems: "center",
+  boxShadow: "none",
   justifyContent: "space-between",
 }));
