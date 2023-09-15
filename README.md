@@ -108,44 +108,171 @@ npm run start
 <th width=40%>ScreenShot</th>
 <th>Description</th>
 </tr>
+
+<tr>
+<td>
+🔶 Landging
+</td>
+<td>
+
+   <img align="center"  src="./public/landing.png" alt="logo">
+</td>
+<td>
+<ul>
+<li>Sign-in</li>
+<li>Sign-up</li>
+</ul>
+</td>
+</tr>
+
 <tr>
 <td>
 🔷 Authentication
 </td>
 <td>
 
-   <img align="center"  src="https://user-images.githubusercontent.com/71986226/214926073-f15e5b52-9752-4b19-b5e8-c174c0c37e9f.png" alt="logo">
+   <img align="center"  src="./public/auth.png" alt="logo">
 </td>
 <td>
 <ul>
 <li>Login</li>
 <li>Sign-up</li>
-<li>Sign-up with Google and Facebook</li>
-<li>Reset Password</li>
-<li>Forget User Name</li>
+<li>Remember me</li>
 </ul>
 </td>
 </tr>
+</table>
+</br>
+<h1>Admin View</h1>
+
+<table align="left;">
 <tr>
-<td>🔶 Create Post</td>
-<td>
+<th width=20%>Feature</th>
+<th width=40%>ScreenShot</th>
+<th>Description</th>
+</tr>
 
-<img align="center" src="https://user-images.githubusercontent.com/71986226/214927486-0d758927-af11-444d-811b-50b1a95953ec.png" alt="logo">
-</td>
-<td>
+<tr>
+<td>🔶 Dashboard</td>
 
-<p>1) You con create 3 types of post</p>
+<td>
+<img align="center" src="./public/dashboard.png" alt="logo">
+</td>
+
+<td>
 <ul>
-<li>📝 Text: you can add text and styling it with fancy text editor</li>
-<li>📷 Image: you can upload photo or video to add to your post</li>
-<li>📎 Link: you can add link to your post</li>
-</ul>
-<p>2) You con add 2 tag to your post</p>
-<ul>
-<li>🔞 NSFW</li>
-<li>💥 spoiler</li>
+<li>Chart Cards</li>
+<li>Line Charts</li>
 </ul>
 </td>
+
+</tr>
+
+<tr>
+<td>🔷 Companies</td>
+
+<td>
+<img align="center" src="./public/company.png" alt="logo">
+</td>
+
+<td>
+<ul>
+<li>View Details of a Company</li>
+<li>Add Stocks for new Companies</li>
+</ul>
+</td>
+
+</tr>
+
+<tr>
+<td>🔶 Investors</td>
+
+<td>
+<img align="center" src="./public/invest.png" alt="logo">
+</td>
+
+<td>
+<ul>
+<li>See Investors Data</li>
+<li>Review Previous Transactions</li>
+</ul>
+</td>
+
+</tr>
+
+<tr>
+<td>🔷 Profile</td>
+
+<td>
+<img align="center" src="./public/prof.png" alt="logo">
+</td>
+
+<td>
+<ul>
+<li>Profile Information</li>
+<li>Account Settings</li>
+</ul>
+</td>
+
+</tr>
+</table>
+</br>
+<h1>Investors View</h1>
+
+<table align="left;">
+<tr>
+<th width=20%>Feature</th>
+<th width=40%>ScreenShot</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>🔶 Dashboard</td>
+
+<td>
+<img align="center" src="./public/dashboard2.png" alt="logo">
+</td>
+
+<td>
+<ul>
+<li>Chart Cards</li>
+<li>Previous Transactions</li>
+</ul>
+</td>
+
+</tr>
+
+<tr>
+<td>🔷 Stocks</td>
+
+<td>
+<img align="center" src="./public/stocks.png" alt="logo">
+</td>
+
+<td>
+<ul>
+<li>View Details of a Company</li>
+<li>See the company Daily Agency</li>
+</ul>
+</td>
+
+</tr>
+
+<tr>
+<td>🔶 Profile</td>
+
+<td>
+<img align="center" src="./public/prof2.png" alt="logo">
+</td>
+
+<td>
+<ul>
+<li>Profile Information</li>
+<li>Account Settings</li>
+<li>Aquired Shares</li>
+</ul>
+</td>
+
 </tr>
 </table>
 
@@ -160,16 +287,16 @@ npm run start
 </tr>
 <tr>
 <td  width="83.5%">
-<video src="https://user-images.githubusercontent.com/71986226/214705509-cb1f10bb-aab2-4252-843b-57249bc10ed3.mp4"   >
-</video> 
+<!-- <video src="https://user-images.githubusercontent.com/71986226/214705509-cb1f10bb-aab2-4252-843b-57249bc10ed3.mp4"   >
+</video>  -->
 </td>
 <td >
 <ul>
-<li>Authentication</li>
+<!-- <li>Authentication</li>
 <li>Comments</li>
 <li>Notification</li>
 <li>Messages</li>
-<li>Settings</li>
+<li>Settings</li> -->
 </ul>
 </td>
 </tr>
@@ -178,14 +305,14 @@ npm run start
 <table align="left;">
 <tr>
 <td width="80.5%">
-<video src="https://user-images.githubusercontent.com/71986226/214708909-fccfd917-f8bb-4166-a76d-de1248faa2bd.mp4"   >
-</video> 
+<!-- <video src="https://user-images.githubusercontent.com/71986226/214708909-fccfd917-f8bb-4166-a76d-de1248faa2bd.mp4"   >
+</video>  -->
 </td>
 <td >
 <ul>
-<li>Home page</li>
+<!-- <li>Home page</li>
 <li>Posts</li>
-<li>Create Post</li>
+<li>Create Post</li> -->
 </ul>
 </td>
 </td>
